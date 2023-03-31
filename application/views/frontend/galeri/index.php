@@ -1,34 +1,32 @@
 <main id="main">
-  <div class="breadcrumbs">
+  <div class="breadcrumbs bg-white">
     <div class="container">
-
-      <div class="d-flex justify-content-between align-items-center">
-        <h2 class="text-dark">Galeri</h2>
-        <ol>
-          <li><a href="<?php echo base_url('utama') ?>">Home</a></li>
-          <li class="text-dark">Blog</li>
-        </ol>
-      </div>
 
     </div>
   </div>
 
-  <!-- Gallery Grid -->
-  <section id="blog" class="blog">
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
     <div class="container">
-      <div class="row">
-        <!-- Gallery item -->
+
+      <div class="section-title" data-aos="fade-up">
+        <h2 style="color: black;">Galeri</h2>
+        <p>SDN MEJASEM BARAT 01</p>
+      </div>
+
+      <div class="row" data-aos="fade-left">
         <?php foreach ($data as $data) : ?>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm p-2">
-              <img src="<?php echo base_url(); ?>assets/images/upload/<?= $data['image']; ?>" alt="" class="zoom img-fluid card-img-top rounded">
-              <div class="p-4">
-                <p class="small text-muted mb-0 text-center"><?= $data['judul']; ?></p>
-              </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="<?php echo base_url(); ?>assets/images/upload/<?= $data['image']; ?>" class="img-fluid" alt=""></div>
             </div>
           </div>
         <?php endforeach; ?>
+
       </div>
+
     </div>
-  </section>
+  </section><!-- End Team Section -->
+
+
 </main>

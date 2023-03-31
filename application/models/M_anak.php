@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_anak extends CI_Model
 {
 
-  private $table = 'data_santri';
+  private $table = 'data_siswa';
   private $table2 = 'detail_santri'; //this is table name
   private $pk = 'nik_anak'; //this is primary key
   private $pk2 = 'nik_anak';
@@ -22,7 +22,7 @@ class M_anak extends CI_Model
     $tahun_masuk = $this->input->post('tahun_masuk');
     $status = $this->input->post('status');
 
-    $this->db->order_by($this->pk, 'desc');
+    $this->db->order_by($this->pk, 'DESC');
     if ($this->input->post('umur') == 1) {
       $this->db->where('umur BETWEEN "7" and "11"');
     }
@@ -216,14 +216,14 @@ class M_anak extends CI_Model
       unlink($file_img);
     }
     $this->db->where('nik_anak', $id);
-    $this->db->delete('data_santri');
+    $this->db->delete('data_siswa');
     $this->db->where('nik_anak', $id);
     $this->db->delete('detail_santri');
   }
 
   function cek_nik($code, $id = null)
   {
-    $this->db->from('data_santri');
+    $this->db->from('data_siswa');
     $this->db->where('nik_anak', $code);
     if ($id != null) {
       $this->db->where('nik_anak !=', $id);

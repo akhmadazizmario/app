@@ -26,9 +26,9 @@
     background-color: #f2f2f2;
   }
 </style>
-<img src="assets/images/kop.jpg" alt="Logo" width="110%" style="margin-left:-50px">
+<img src="assets/images/kop_sd_mejasem.png" alt="Logo" width="110%" style="margin-left:-50px">
 <h3>
-  <center>Laporan Surat Keluar<br>Pondok Pesantren Ridhyatul Solikhin - Kab. Tegal</center>
+  <center>Laporan Surat Keluar<br> SD NEGERI MEJASEM BARAT 01</center>
 </h3>
 <br><br>
 <table id="tabel1">

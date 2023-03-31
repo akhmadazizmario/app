@@ -55,23 +55,21 @@
 
               <div class="form-group">
                 <label for="telp_pengurus"> No Telepon </label><br>
-                <input class="form-control" id="telp_pengurus" type="text" name="telp_pengurus" value="<?= $row['telp_pengurus'] ?>" oninvalid="this.setCustomValidity('No. Telp Wajib Diisi')" oninput="this.setCustomValidity('')" readonly>
+                <input class="form-control" id="telp_pengurus" type="text" name="telp_pengurus" value="<?= $row['telp_pengurus'] ?>" oninvalid="this.setCustomValidity('No. Telp Wajib Diisi')" oninput="this.setCustomValidity('')">
               </div>
 
               <div class="form-group">
                 <label for="jabatan"> Jabatan </label><br>
                 <select class="form-control" name="jabatan" required oninvalid="this.setCustomValidity('Pilih Jabatan disini')" oninput="setCustomValidity('')">
                   <option value="">:: Pilih Jabatan ::</option>
-                  <option value="1" <?= $row['jabatan'] == '1' ? 'selected' : null ?>>Ketua</option>
-                  <option value="2" <?= $row['jabatan'] == '2' ? 'selected' : null ?>>Wakil Ketua</option>
-                  <option value="3" <?= $row['jabatan'] == '3' ? 'selected' : null ?>>Sekretaris 1</option>
-                  <option value="4" <?= $row['jabatan'] == '4' ? 'selected' : null ?>>Sekretaris 2</option>
-                  <option value="5" <?= $row['jabatan'] == '5' ? 'selected' : null ?>>Bendahara</option>
-                  <option value="6" <?= $row['jabatan'] == '6' ? 'selected' : null ?>>Penanggungjawab sekaligus Pengajar Akhlak</option>
-                  <option value="7" <?= $row['jabatan'] == '7' ? 'selected' : null ?>>Bidang Pendidikan</option>
-                  <option value="8" <?= $row['jabatan'] == '8' ? 'selected' : null ?>>Pelaksana Harian</option>
-                  <option value="9" <?= $row['jabatan'] == '9' ? 'selected' : null ?>>Juru Masak</option>
-                  <option value="10" <?= $row['jabatan'] == '10' ? 'selected' : null ?>>Admin</option>
+                  <option value="1" <?= $row['jabatan'] == '1' ? 'selected' : null ?>>Kepala Sekolah</option>
+                  <option value="2" <?= $row['jabatan'] == '2' ? 'selected' : null ?>>Wakil Kepala Sekolah</option>
+                  <option value="3" <?= $row['jabatan'] == '3' ? 'selected' : null ?>>Kesiswaan </option>
+                  <option value="4" <?= $row['jabatan'] == '4' ? 'selected' : null ?>>Kurikulum </option>
+                  <option value="5" <?= $row['jabatan'] == '5' ? 'selected' : null ?>>Wali Kelas</option>
+                  <option value="6" <?= $row['jabatan'] == '6' ? 'selected' : null ?>>Tata Usaha</option>
+                  <option value="7" <?= $row['jabatan'] == '7' ? 'selected' : null ?>>BK</option>
+                  <option value="8" <?= $row['jabatan'] == '8' ? 'selected' : null ?>>Pustakawan</option>
                 </select>
               </div>
 

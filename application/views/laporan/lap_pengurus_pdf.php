@@ -26,12 +26,13 @@
         background-color: #f2f2f2;
     }
 </style>
-<img src="assets/images/kop.jpg" alt="Logo" width="110%" style="margin-left:-50px">
+<img src="assets/images/kop_sd_mejasem.png" alt="Logo" width="110%" style="margin-left:-50px">
 <h3>
-    <center>Laporan Data Pengurus<br>Pondok Pesantren Ridhyatul Solikhin - Kab. Tegal</center>
+    <center>Laporan Data Pengurus<br>SD NEGERI MEJASEM BARAT 01</center>
 </h3>
 <br><br>
-<table id="tabel1">
+
+<table id="tabel1" align="center">
 
     <head>
         <tr>
@@ -44,7 +45,7 @@
             <th>Jabatan</th>
             <th>Status</th>
             <th>Pendidikan</th>
-            <th>Pelatihan</th>
+            <!--<th>Pelatihan</th>-->
         </tr>
     </head>
 
@@ -63,25 +64,21 @@
                 <td><?php echo date_indo($row['mulai_kerja']); ?></td>
                 <td>
                     <?php if ($row['jabatan'] == 1) { ?>
-                        <span>Ketua</span>
+                        <span>Kepala Sekolah</span>
                     <?php } elseif ($row['jabatan'] == 2) { ?>
-                        <span>Wakil Ketua</span>
+                        <span>Wakil Kepala Sekolah</span>
                     <?php } elseif ($row['jabatan'] == 3) { ?>
-                        <span>Sekretaris 1</span>
+                        <span>Kesiswaan </span>
                     <?php } elseif ($row['jabatan'] == 4) { ?>
-                        <span>Sekretaris 2</span>
+                        <span>Kurikulum</span>
                     <?php } elseif ($row['jabatan'] == 5) { ?>
-                        <span>Bendahara</span>
+                        <span>Wali Kelas</span>
                     <?php } elseif ($row['jabatan'] == 6) { ?>
-                        <span>Penanggungjawab sekaligus Pengajar Akhlak</span>
+                        <span>Tata Usaha</span>
                     <?php } elseif ($row['jabatan'] == 7) { ?>
-                        <span>Bidang Pendidikan</span>
-                    <?php } elseif ($row['jabatan'] == 8) { ?>
-                        <span>Pelaksana Harian</span>
-                    <?php } elseif ($row['jabatan'] == 9) { ?>
-                        <span>Juru Masak</span>
+                        <span>BK</span>
                     <?php } else { ?>
-                        <span>Admin</span>
+                        <span>Pustakawan</span>
                     <?php } ?>
                 </td>
                 <td>
@@ -103,7 +100,7 @@
                     <?php } else { ?>
                         <span>S2</span>
                     <?php } ?>
-                <td><?php echo $row['pelatihan']; ?></td>
+                    <!--<td><?php echo $row['pelatihan']; ?></td>-->
             </tr>
         <?php $no++;
         }  ?>

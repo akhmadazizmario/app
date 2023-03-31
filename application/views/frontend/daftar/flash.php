@@ -11,7 +11,7 @@
     <section>
         <div class="container" data-aos="fade-up">
             <div class="alert alert-info" role="alert"><i class="bx bx-info-circle"></i><strong> Pendaftaran Anda sudah
-                    berhasil dan sedang di cek oleh admin Pesantren. setelahnya silahkan cek whatsapp atau pesan untuk
+                    berhasil dan sedang di cek oleh admin SD NEGERI MEJASEM BARAT 01. setelahnya silahkan cek whatsapp atau pesan untuk
                     pemberitahuan yang lebih lanjut lagi,
                     karena kami akan memberitahukan pengumuman lewat
                     whatsapp / sms ke nohp yang anda kirim.</strong>

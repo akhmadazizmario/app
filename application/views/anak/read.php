@@ -24,6 +24,7 @@
                   <th>No</th>
                   <th>Foto Anak</th>
                   <th>NIK Anak</th>
+                  <th>NISN</th>
                   <th>Nama</th>
                   <!-- <th>Alamat lengkap</th>
                   <th>No HP</th>
@@ -36,7 +37,7 @@
                   <th>Pekerjaan Ibu</th>
                   <th>Pekerjaan Ayah</th>
                   <th>Agama</th> -->
-                  <th>Pendidikan</th>
+                  <th>Kelas</th>
                   <th>tahun masuk</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -50,11 +51,12 @@
                     <td> <?php if ($row['foto_anak'] != null) { ?>
                         <img src="<?= base_url('upload/foto_anak/' . $row['foto_anak']) ?>" alt="" width="80px">
                       <?php } elseif ($row['foto_anak'] != null) { ?>
-                        <img src="http://localhost/eponpes/assets/images/placeholder.png" width="80px">
+                        <img src="<?php echo base_url() ?>/assets/images/placeholder.png" width="80px">
                       <?php } ?>
 
                     </td>
                     <td><?php echo $row['nik_anak']; ?></td>
+                    <td><?php echo $row['NISN']; ?></td>
                     <td><?php echo ucwords($row['nama_anak']); ?></td>
                     <!-- <td><?php echo $row['alamat']; ?></td>
                     <td><?php echo $row['no_hp']; ?></td>
@@ -78,13 +80,7 @@
                       <?php } ?>
                     </td> -->
                     <td>
-                      <?php if ($row['pendidikan'] == 1) { ?>
-                        <span class="badge badge-primary"> Tafidz ( Ponpes )</span>
-                      <?php } elseif ($row['pendidikan'] == 2) { ?>
-                        <span class="badge badge-danger"> Kitab ( Ponpes )</span>
-                      <?php } elseif ($row['pendidikan'] == 3) { ?>
-                        <span class="badge badge-success">RTQ ( Rumah Tafidz Quran )</span>
-                      <?php } ?>
+                      <?php echo ucwords($row['pendidikan']); ?>
                     </td>
                     <!-- <td> <?php if ($row['foto_anak'] != null) { ?>
                         <img src="<?= base_url('upload/scan_ijasah/' . $row['scan_ijasah']) ?>" alt="" width="80px">

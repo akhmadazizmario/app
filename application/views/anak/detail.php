@@ -113,37 +113,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>Pendidikan</th>
-                  <td> : </td>
-                  <td> <?php if ($row['pendidikan'] == '1') { ?>
-                      SD/MI
-                    <?php } else if ($row['pendidikan'] == '2') { ?>
-                      SMP/MTS
-                    <?php } else if ($row['pendidikan'] == '3') { ?>
-                      SMK/SMA/MA
-                    <?php } else { ?>
-                      Kuliah
-                    <?php } ?>
-                  </td>
-                </tr>
-
-
-
-
-                <tr>
-                  <th width="150px">Berkas Ijazah</th>
+                  <th>Kelas</th>
                   <td> : </td>
                   <td>
-                    <?php
-                    if ($row['scan_ijasah'] == '') {
-                    ?>
-                      <span class="btn btn-secondary"><i class="fa fa-exclamation"></i> tidak tersedia</span>
-                    <?php
-                    } else {
-                    ?>
-                      <a class="btn btn-primary" href="<?= base_url('upload/scan_ijasah/' . $row['scan_ijasah']); ?>" title="Download KTP" target='_blank'> <i class="fa fa-download"></i> Detail Ijazah </a>
-                    <?php } ?>
-                    <p></p>
+                    <?= $row['pendidikan'] ?>
                   </td>
                 </tr>
 

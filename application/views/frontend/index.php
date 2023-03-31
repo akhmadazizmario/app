@@ -1,212 +1,229 @@
-<main id="main">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" style="background-color: rgb(2, 5, 161);">
 
-    <!-- Bagian Hero -->
-    <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container" id="hero-desc" data-aos="zoom-in" data-aos-delay="100">
-            <h1 id="hero-title" class="text-success">
-                Pondok Pesantren<br>RIYADUS SHOLIHIN TARUB<br> KAB.TEGAL
-            </h1>
-            <h2 class="text-dark">AYO MONDOK SEKARANG JUGA !</h2>
-            <p class="text-dark">
-                membimbing generasi muda <br> untuk belajar ilmu agama dan mandiri
-            </p>
-            <a href="<?php echo base_url('daftar/tambah') ?>" id="btn-daftar" class="card btn-get-started bg-success">Daftar Sekarang</a>
-        </div>
-    </section>
+      <div class="container">
+          <div class="row justify-content-between">
+              <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+                  <div data-aos="zoom-out">
 
 
-    <!-- Bagian Card Pendaftaran -->
-    <section id="why-us" class="why-us">
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-                <div class="col-lg-4 d-flex align-items-stretch">
-                    <div class="card content">
-                        <h3>Apakah Anda kesulitan Mendaftar?</h3>
-                        <p>Jika Calon Santri mengalami kesulitan untuk mendaftar di website eponpes riyadus sholihin, anda bisa masuk ke halaman berikut</p>
-                        <div class="text-center">
-                            <a href="<?php echo base_url('utama/kesulitanMendaftar') ?>" class="card more-btn bg-light text-success">Masuk Halaman <i class="bx bx-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                      <h1 style="color: white;">SDN MEJASEM BARAT 01 </h1>
+                      <p class="text-white">
+                          <?php
+                            date_default_timezone_set('Asia/Jakarta'); // Zona Waktu indonesia
+                            echo date('G:i') . " WIB - "; // menampilkan jam sekarang
+                            ?>
+                          <script>
+                              var h = (new Date()).getHours();
+                              var m = (new Date()).getMinutes();
+                              var s = (new Date()).getSeconds();
+                              if (h >= 4 && h < 10) document.writeln(" Hallo Selamat pagi 👋");
+                              if (h >= 10 && h < 15) document.writeln("Hallo Selamat siang 👋");
+                              if (h >= 15 && h < 18) document.writeln("Hallo Selamat sore 👋");
+                              if (h >= 18 || h < 4) document.writeln("Hallo Selamat malam 👋");
+                          </script>
+                      </p>
+                      <p class="text-white"> Selamat Datang di Website Resmi
+                          Sebagai media informasi dan komunikasi Web SDN Mejasem Barat 01
+                          dibangun dan dikembangkan dalam rangka meningkatkan layanan sekolah kepada peserta didik, orang tua, dan masyarakat.</p>
+                      <div class="text-center text-lg-start">
+                          <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Pendaftaran Peserta Didik</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+                  <img src="<?php echo base_url() ?>assets/images/sd.png" class="img-fluid animated" alt="">
+              </div>
+          </div>
+      </div>
 
-                <!-- Bagian Alamat -->
-                <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-boxes d-flex flex-column justify-content-center">
-                        <div class="row">
-                            <div class="col-xl-4 d-flex align-items-stretch">
-                                <div class="card icon-box mt-4 mt-xl-0">
-                                    <i class="bx bx-map"></i>
-                                    <h4>Alamat</h4>
-                                    <p>Jl. Lokajaya, Karangmangu,Kec.Tarub, Kab.Tegal, Jawa Tengah 52184</p>
-                                </div>
-                            </div>
-                            <?php
-                            foreach ($data as $data) { ?>
-                                <div class="col-xl-4 d-flex align-items-stretch">
-                                    <div class="card icon-box mt-4 mt-xl-0">
-                                        <i class="bx bx-home"></i>
-                                        <h4>Fasilitas</h4>
-                                        <p><?php echo substr($data['fasilitas'], 0, 150) . '.'; ?></p>
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-4 d-flex align-items-stretch">
-                                    <div class="card icon-box mt-4 mt-xl-0">
-                                        <i class="bx bx-detail"></i>
-                                        <h4>Informasi Pendaftaran</h4>
-                                        <p>Dibuka Pendaftaran :<br>
-                                            <font color="blue"><?php echo ucwords($data['pendaftaran_awal']); ?> </font><br>
-                                            Batas Pendaftaran : <br>
-                                            <font color="red"> <?php echo ucwords($data['batas_akhir']); ?> </font><br>
-                                            Tahun ajar : <?php echo ucwords($data['periode']); ?>
-                                        </p>
-                                    </div>
-                                </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+          <defs>
+              <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+          </defs>
+          <g class="wave1">
+              <use xlink:href="#wave-path" x="50" y="3" fill="#D6E8EE">
+          </g>
+          <g class="wave2">
+              <use xlink:href="#wave-path" x="50" y="0" fill="#97CADB">
+          </g>
+          <g class="wave3">
+              <use xlink:href="#wave-path" x="50" y="9" fill="#01BABE">
+          </g>
+      </svg>
 
 
-    <section id="about" class="card about bg-light">
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-                <h3 class="text-center"><strong>PPDB Online</strong></h3>
-                <p>Proses seleksi pendaftaran penerimaan peseta didik baru yang dilaksanakan sepanjang tahun untuk Kategori Tahfidz, Kitab, dan RTQ Pesantren
-                    Riyadus Sholihin Tarub Kab.Tegal yang dilakukan secara online melalui jalur internal, prestasi, dan reguler.</p><br>
-                <div class="col-md-4">
-                    <?php
-                                foreach ($brosur as $br) { ?>
-                        <img src="<?php echo base_url(); ?>assets/images/upload/<?= $br['image']; ?>" align="right" width="100px" height="100px" class="img-fluid rounded" alt="...">
-                    <?php } ?>
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h2>Brosur Penerimaan Peserta Didik Baru <?php echo ucwords($data['periode']); ?> </h2>
-                        <p class="card-text text-justify">Pondok Pesantren Riyadus sholihin Tarub membuka pendaftaran peserta didik baru</p>
-                        <a class="btn btn-primary btn-sm" href="<?php echo base_url('Utama/brosur') ?>">Lihat Brosur</a>
-                        <a class="btn btn-success btn-sm" href="<?php echo base_url('daftar/tambah') ?>"> Daftar sekarang </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </section><!-- End Hero -->
 
 
-    <!-- Bagian Tentang Ponpes -->
-    <section id="tentangkami" class="tentangkami">
-        <div class="container" data-aos="fade-up">
+  <!-- ======= Section ======= -->
+  <section id="">
+      <div class="container">
+          <div class="row">
 
-            <div class=" p-3" style="max-width: cover;">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="<?= base_url() ?>assets/frontend/img/logo_ponpes.jpg" class="img-fluid rounded" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body"><br>
-                            <h2 class="text-center">PONDOK PESANTREN RIYADUSH SHOLIHIN TARUB KAB.TEGAL</h2><br>
-                            <p class="card-text text-justify">Pondok Pesantren Riyadus Sholihin Adalah PonPes Putra Dan Putri,
-                                Yang Merupakan PonPes Yang Menganut Sistem Pembelajaran Modern Atau Dikenal "Pondok Pesantren
-                                Perpadauan Metodologi Belajar Menggabungkan Dari Salaf Dan Khalaf". Hafalan Menggunakan Pelajaran
-                                Modern 2021 Seperti Ceramah, Diskusi, Presentasi Serta Memanfaatkan Teknologi Untuk Menunjang
-                                Proses Belajar.<br><br>
-                                Dibangun Di Atas Pondasi TAQWA Dengan Asas Al-Quran Dan Sunnah,
-                                Berupaya Mengembalikan Masyarakat Iman Islam Kepada Ajaran Islam Yang Sesungguhnya
-                                Yang Datang Dari Alloh Dan Rasul-Nya Serta Berupaya Mendidik Dan Membekali Kader Dakwah
-                                Dengan Aqidah Sholihah, Ibadah, Adab Dan Akhlak Dan Mu’amalah Berdasarkan Al-Quran Dan Sunnah
-                                Dengan Manhaj Salafus Sholeh, Ahlus Sunnah Wal Jama’ah Serta Ditambah Materi Khusus Hafalan
-                                Al-Qur’an Juga Dipadu Dengan Keilmuan Umum Dan Keterampilan Yang Diimbangi Oleh Tenaga Pengajar
-                                Professional Dibidangnya.</p>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bagian Visi Misi Ponpes -->
-    <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                    <img src="<?php echo base_url() ?>assets/frontend/img/p2.jpg" class="img-fluid" alt="" style="width: 100%;height:400px;">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                    <h3>
-                        VISI MISI
-                    </h3>
-                    <p class="fst-italic">
-                        pondok pesantren riyadus sholihin tentunya juga punya visi misi untuk menyukseskan generasi muda sekarang.
-                    </p>
-                    <ul>
-                        <li><i class="bi bi-check-circle"></i> Unggul dalam ilmu,terampil dalam amal, dan mulia dalam akhlak.</li>
-                        <li><i class="bi bi-check-circle"></i> mendidik santri mengamalkan Al Qur'an dan Sunnah Rasulullah SAW.</li>
-                        <li><i class="bi bi-check-circle"></i> Melatih santri untuk menghafal ayat-ayat Al Qur'an.</li>
-                        <li><i class="bi bi-check-circle"></i> Mengembangkan potensi santri berjiwa mandiri,kerja keras,kompetitif dan jujur.</li>
-                        <li><i class="bi bi-check-circle"></i> Mempersiapkan santri untuk menjadi Hafish Al Qur'an.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                          <img src="<?php echo base_url() ?>/assets/images/bg10.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                          <img src="<?php echo base_url() ?>/assets/images/bg14.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
 
 
 
-    <!-- Bagian Tata Cara Pendaftaran -->
-    <section id="about" class="about section-bg bg-white">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-                <h1><strong class="text-dark">Tata Cara pendaftaran</strong> </h1>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                    <img src="<?php echo base_url() ?>assets/frontend/img/form.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center bg-white" data-aos="fade-up" data-aos-delay="100">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Masuk ke website ponpes riyadush sholihin tarub</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Persiapkan terlebih dahulu berkas-berkasnya</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Jika berkasnya sudah disiapkan, Klik Tombol Daftar Sekarang</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Isi formulir pendaftaran dengan data yang Valid!</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Jika sudah diisi lalu klik Daftar dan akan muncul pesan "Pendaftaran berhasil" .
-                                </h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Pendaftaran sudah diproses ponpes, untuk pemberitahuan selanjutnya akan diberitahu melalui <strong>No HP/Whatsapp</strong> calon santri.</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+          </div>
+      </div>
+  </section>
 
 
+  <main id="main">
 
-<?php } ?>
-<!-- Bagian Peta -->
-<section id="features" class="features">
-    <div class="container" data-aos="fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41861.221564241016!2d109.19118662589902!3d-6.945777798187543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb96ac80aa19d%3A0xeec7377655a2b090!2sPondok%20pesantren%20riyadush%20sholihin!5e0!3m2!1sid!2sid!4v1658368615358!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
-    </div>
-</section>
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+          <div class="container-fluid">
+
+              <div class="row">
+                  <?php
+                    foreach ($data as $data) { ?>
+                      <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+                          <img src="<?= base_url() ?>assets/images/upload/<?php echo ucwords($data['image']); ?>" alt="" height="300px" width="50%">
+                      </div>
+
+                      <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+                          <h3>Sambutan Kepala Sekolah</h3>
+                          <p>Assalamu‘alaikum Warohmatullahi Wabarokkatuh. <br>
+
+                              Selamat datang di situs web SDN Mejasem Barat 01, Kecamatan Kramat Kabupaten Tegal Jawa Tengah. Saya mengucapkan terima kasih kepada semua guru, staf, siswa, dan orang tua yang telah berkontribusi dalam memajukan sekolah kami. Sekolah ini telah berkembang pesat dan mencapai tujuan pendidikannya dengan baik. Kami bertekad untuk terus memberikan pelayanan terbaik bagi siswa dan orang tua. Semoga kunjungan Anda dan anggota keluarga di website ini dapat memberikan informasi yang membantu Anda untuk mengetahui lebih banyak tentang kami, termasuk program-program unggulan yang kami miliki. Terima kasih.
+
+                              Wassalamu'alaikum Warahmatullahi Wabarakatuh. <br><br> Salam Hangat, <br>
+
+                          <h4><strong><?php echo ucwords($data['nama_kepala_ponpes']); ?></strong></h4>
+
+                          Kepala Sekolah, <br>
+
+                          SDN Mejasem Barat 01, Kecamatan Kramat, Kabupaten Tegal, Jawa Tengah.</p>
+                          <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+                              <defs>
+                                  <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                              </defs>
+                              <g class="wave1">
+                                  <use xlink:href="#wave-path" x="50" y="3" fill="#D6E8EE">
+                              </g>
+                              <g class="wave2">
+                                  <use xlink:href="#wave-path" x="50" y="0" fill="#97CADB">
+                              </g>
+                              <g class="wave3">
+                                  <use xlink:href="#wave-path" x="50" y="9" fill="#01BABE">
+                              </g>
+                          </svg>-->
 
 
 
+                      </div>
+              </div>
 
-</main>
+          </div>
+      </section><!-- End About Section -->
+      <!-- ======= Details Section ======= -->
+      <section id="details" class="details">
+          <div class="container">
+
+              <div class="row content">
+                  <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+                      <?php
+                        foreach ($brosur as $br) { ?>
+                          <img src="<?php echo base_url(); ?>assets/images/upload/<?= $br['image']; ?>" width="370px" height="500px" alt="...">
+                      <?php } ?>
+                  </div>
+                  <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+                      <h3>VISI DAN MISI</h3><br>
+                      <h5>VISI</h5>
+                      <p class="fst-italic">
+                          Mewujudkan siswa yang bertaqwa, berprestasi, berbudaya, dan berjiwa nasionalis.
+                      </p><br>
+                      <h5>MISI</h5>
+                      <p>
+                          <i class="bi bi-check"></i> Menumbuhkembangkan penghayatan dan pengamalan ajaran agama yang dianut peserta didik. <br>
+                          <i class="bi bi-check"></i> Mengembangkan dan melaksanakan model pembelajaran Aktif, Inovatif, Kreatif, Efektif Serta menyenangkan. <br>
+                          <i class="bi bi-check"></i> Mengembangkan budaya kompetitif dikalangan peserta didik dalam upaya meningkatkan prestasi. <br>
+                          <i class="bi bi-check"></i> Menanamkan budaya tertib, budaya bersih, budaya membaca dan budaya belajar. <br>
+                          <i class="bi bi-check"></i> Melestarikan dan mengembangkan seni budaya daerah. <br>
+                          <i class="bi bi-check"></i> Mengembangkan pribadi yang cinta tanah air. <br>
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+      </section><!-- End Details Section -->
+
+
+      <!-- ======= Pricing Section ======= -->
+      <section id="pricing" class="pricing bg-light">
+          <div class="container">
+
+              <div class="row" data-aos="fade-left">
+
+                  <div class="col-lg-4 col-md-6 ">
+                      <div class="box" data-aos="zoom-in" data-aos-delay="200" style="height: 350px;">
+                          <h3 style="color:white;background-color:black;">Informasi Pendaftaran</h3>
+                          <p>Dibuka Pendaftaran Peserta Didik : <br>
+                              <font color="blue"><?php echo ucwords($data['pendaftaran_awal']); ?> </font><br>
+                              Batas Pendaftaran : <br>
+                              <font color="red"> <?php echo ucwords($data['batas_akhir']); ?> </font><br>
+                              Tahun ajar : <?php echo ucwords($data['periode']); ?>
+                          </p>
+                          <div class="btn-wrap bg-white">
+                              <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-buy">Pendaftaran Peserta Didik</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+                      <div class="box" data-aos="zoom-in" data-aos-delay="100" style="height: 350px;">
+                          <h3 style="color:white;background-color:black;">Bantuan ?</h3><br>
+                          <p style="color: black;">Jika Calon Siswa mengalami kesulitan untuk mendaftar di website, anda bisa Klik Bantuan dibawah ini.</p>
+                          <div class="btn-wrap bg-white">
+                              <a href="<?php echo base_url('utama/kesulitanMendaftar') ?>" class="btn-buy">Bantuan ?</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                      <div class="box" data-aos="zoom-in" data-aos-delay="300" style="height: 350px;">
+                          <h3 style="color:white;background-color:black;">Alamat Sekolah</h3><br><br>
+                          <p>Jl. Semanggi IV, Sibata, Mejasem Tim., Kec. Kramat, Kabupaten Tegal, Jawa Tengah 12930</p>
+
+                      </div>
+                  </div>
+
+
+
+              </div>
+
+          </div>
+      </section><!-- End Pricing Section -->
+
+
+  <?php } ?>
+
+
+
+
+  <!-- Bagian Peta -->
+  <section id="features" class="features">
+      <div class="container" data-aos="fade-up"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.052863321928!2d109.1537895762534!3d-6.884271399858403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb838fbcf6ed1%3A0x8c2e4ab8aa3df2d3!2sSD%20Negeri%2001%20Mejasem%20Barat!5e0!3m2!1sid!2sid!4v1678801346105!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </section>
+
+  </main>

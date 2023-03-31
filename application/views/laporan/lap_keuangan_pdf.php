@@ -31,9 +31,9 @@ error_reporting(0);
   }
 </style>
 
-<img src="assets/images/kop.jpg" alt="Logo" style="width: 100%">
+<img src="assets/images/kop_sd_mejasem.png" alt="Logo" style="width: 100%">
 <h3>
-  <center>Laporan Keuangan<br>Pondok Pesantren Ridhyatul Solikhin - Kab. Tegal</center>
+  <center>Laporan Keuangan<br> SD NEGERI MEJASEM BARAT 01</center>
 </h3>
 <?php if ($this->input->post('kategori')) { ?>
   <p>
@@ -93,10 +93,10 @@ error_reporting(0);
   </tr>
   <tr>
     <td>
-      Ketua
+      Kepala Sekolah
     </td>
     <td>
-      Bendahara
+      Pengurus
     </td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ error_reporting(0);
     <td></td>
   </tr>
   <tr>
-    <td>Ramlah, S.Pd.</td>
-    <td>Eva Noor Fasicha</td>
+    <td>Suratman, S.Pd.</td>
+    <td>Nur Hayati, S.Pd.</td>
   </tr>
 </table>

@@ -1,42 +1,29 @@
-# ePONPES Ridhyatul Solikhin Kabupaten Tegal
+# eSekolah SD NEGERI MEJASEM BARAT 01 Kabupaten Tegal
 
-Website sistem informasi pengelolaan data pondok pesantren, aplikasi ini dikembangkan untuk program  
-Hibah Pengabdian Masyarakat 2022 - Universitas BSI Tegal
+Website sistem informasi pengelolaan data SD NEGERI MEJASEM BARAT 01, aplikasi ini dikembangkan untuk memnuhi Kelulusan TUGAS AKHIR 2023 - Universitas BSI Tegal
 
 ### 📆 Tanggal Rilis ( Pengembangan )
-- Awal Agustus
+- Awal APRIL
 
 ### 👨‍💻 Developer
-- Husni Faqih
-- Rousyati
-- Husni Mubarok
-- Andika Tulus Pangestu
-- Arvano Salma Fatimatus Zahra
-- Akhmad Aziz Mario
-- Wafiq Azizah
+- AKHMAD AZIZ MARIO
+- FIDA MEILINDA EFFENDI
+- ITSNA LUTFIA ARDIANSYIAH
 	
 ### 🗒 ToDo List
 - [x] Halaman Login
 - [x] Halaman Landing
-- [x] Halaman News
+- [x] Halaman Berita
 - [ ] Donasi - **Discontinued**
 - [x] Filter Waktu Laporan
-- [x] Kontak Ponpes
+- [x] Kontak Sekolah
 - [x] Lainnya...
 
-### 🔍 Apa apakah yang baru?
 
-- Lihat perubahan [lebih lanjut.](../main/changelogs.md)
-
-### 👥 Informasi Akun
-- Administrator         : administrator - admin 
-- Administrator Ponpes  : admin - admin
-- Pengurus              : pengurus - pengurus
-- Bendahara             : bendahara - bendahara
 
 ### 📸 Preview  
 
-|![image](https://user-images.githubusercontent.com/62005221/184621665-02f6c6c9-7579-4cd6-907b-e6d2bac4a1c3.png)|![image](https://user-images.githubusercontent.com/62005221/184621781-b3857ba3-ad52-42fc-9eeb-0fbb35daccbf.png)|![image](https://user-images.githubusercontent.com/62005221/184621907-8d9459d6-3db2-49c1-b9f8-9901257b14b6.png)|
+|![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhn8lvJIKzoNiwRnaqDzgVFCqPcW7slipjmwomR8Qcl1Ab7mmy4uMBGZROPVEyAL53xZ-m8NecLn3yAeSyWcBc29o5GJZbg7aZp2Q4jjzc5uzJuaKi2xFeOiaag5EQGQvvRAltqtyK34YgvF5Tl14FvMA2xc2p0aLwXlUvqyRSCD_d2iLlWCrE4UIDovQ/s320/gambar1.png)|![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjY8lgQDBdZVLBUqPkJTGGgfHP-TOBTQYy2tAspIyWTIDspp507EMS7rE7_bmPBbGKkd_9_qZ5MLBrKra1XbitWSFfMJXLLsD91D04Cc7uFPKgjlKbv_seXKYjsnug4rRwV5vPWJP2_9g8uA3Fk-rFiw49_jly1c_29-zHgmE2VRO2NXVJ1DCtiMEiQwg/s320/gambar2.png)|![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqZok5xSifCqEeoWR6gJjwUYPiDKyfTzQXSYBLyfMYnMdAxgFU_pED7v7yNX-RuAXfMmENDj1Jc36ubW98Y7Fwgs-7W9uBLG-7Lb4Sah1tR5EP5SFkxa5nGWFYKMv4Ica53Y3OCyJxVR9fbvIt-SVn9gBBmDRiEG3AmYVUFQj_Yt7yYY94MGFExwtikA/s320/gambar3.png)|
 |-----|-----|-----|  
 
 ### 📝 Persyaratan Penggunaan
@@ -46,9 +33,9 @@ Hibah Pengabdian Masyarakat 2022 - Universitas BSI Tegal
 
 ### 💡 Cara Instalasi
 - Download dan Ekstrak Source Code ke folder htdocs ( Jika menggunakan XAMPP )
-- Buat Database di phpmyadmin dengan nama : db_ponpes
+- Buat Database di phpmyadmin
 - Import file database yang ada di folder ```/database```
-- Jalankan file nya dengan akses ```localhost/eponpes/auth``` ( Untuk Login Admin ) atau ```localhost/eponpes/utama``` ( Untuk Landing Page )
+- Jalankan file nya dengan akses ```localhost/nama_apk/auth``` ( Untuk Login Admin ) atau ```localhost/nama_apk/utama``` ( Untuk Landing Page )
 
 ### ☕ Referensi, Lisensi Sumber Perangkat Lunak terbuka, Kontribusi
 - [Bootstrap](https://getbootstrap.com/)

@@ -26,9 +26,9 @@
         background-color: #f2f2f2;
     }
 </style>
-<img src="assets/images/kop.jpg" alt="Logo" width="110%" style="margin-left:-50px">
+<img src="assets/images/kop_sd_mejasem.png" alt="Logo" width="110%" style="margin-left:-50px">
 <h3>
-    <center>Laporan Data Anak<br>Pondok Pesantren Riyadus sholihin</center>
+    <center>Laporan Data Siswa<br> SD NEGERI MEJASEM BARAT 01</center>
 </h3>
 <br><br>
 <table id="tabel1">
@@ -39,12 +39,14 @@
         <th>Jenis Kelamin</th>
         <th>Tempat Tanggal Lahir</th>
         <th>Nama Ibu</th>
-        <th>Nama Bapak</th>
-        <th>Pekerjaan Orang Tua</th>
+        <th>Nama Ayah</th>
+        <th>Pekerjaan ayah</th>
+        <th>Pekerjaan Ibu</th>
         <th>Alamat</th>
         <th>Agama</th>
-        <th>Pendidikan</th>
-        <th>Kategori</th>
+        <th>Kelas</th>
+        <th>Tahun Masuk</th>
+        <!--<th>Kategori</th>-->
         <th>Status</th>
     </tr>
 
@@ -65,6 +67,7 @@
             <td><?php echo ucwords($row['nama_ibu_kandung']); ?></td>
             <td><?php echo ucwords($row['nama_bapak_kandung']); ?></td>
             <td><?php echo ucwords($row['pekerjaan_ayah']); ?></td>
+            <td><?php echo ucwords($row['pekerjaan_ibu']); ?></td>
             <td><?php echo ucwords($row['alamat']); ?></td>
             <td>
                 <?php if ($row['agama'] == 1) { ?>
@@ -83,29 +86,40 @@
             </td>
             <td>
                 <?php if ($row['pendidikan'] == 1) { ?>
-                    <span>SD/MI</span>
+                    <span class="badge badge-primary">1</span>
                 <?php } elseif ($row['pendidikan'] == 2) { ?>
-                    <span>SMP/MTS</span>
+                    <span class="badge badge-danger">2</span>
                 <?php } elseif ($row['pendidikan'] == 3) { ?>
-                    <span>SMK/SMA/MA</span>
+                    <span class="badge badge-danger">3</span>
+                <?php } elseif ($row['pendidikan'] == 4) { ?>
+                    <span class="badge badge-danger">4</span>
+                <?php } elseif ($row['pendidikan'] == 5) { ?>
+                    <span class="badge badge-danger">5</span>
+                <?php } elseif ($row['pendidikan'] == 6) { ?>
+                    <span class="badge badge-danger">6</span>
                 <?php } else { ?>
-                    <span>Kuliah</span>
+                    <span class="badge badge-success">Kuliah</span>
                 <?php } ?>
             </td>
-            <td>
+            <td><?php echo ucwords($row['tahun_masuk']); ?></td>
+            <!--<td>
                 <?php if ($row['id_kelas'] == '1') { ?>
                     <span>Pondok Pesantren</span>
                 <?php } else { ?>
                     <span> Rumah Tahfidz Qur'an</span>
                 <?php } ?>
-            </td>
+            </td>-->
             <td>
                 <?php if ($row['status'] == '1') { ?>
                     <span>Aktif</span>
+                <?php } else if ($row['status'] == '2') { ?>
+                    <span>Tidak Aktif</span>
                 <?php } else if ($row['status'] == '3') { ?>
                     <span>Alumni</span>
+                <?php } else if ($row['status'] == '4') { ?>
+                    <span>Masih Dalam Seleksi</span>
                 <?php } else { ?>
-                    <span>Tidak Aktif</span>
+                    <span>Tidak Diterima</span>
                 <?php } ?><br>
             </td>
         </tr>

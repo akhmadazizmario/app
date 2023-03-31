@@ -7,7 +7,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h2 class="text-dark"><?= $judul ?></h2>
                 <ol>
-                    <li class="text-white"><a href="<?php echo base_url('utama') ?>">Beranda</a></li>
+                    <li class="text-white"><a href="<?php echo base_url('utama/blog') ?>">Beranda</a></li>
                     <li class="text-dark"><?= $judul ?></li>
                 </ol>
             </div>
@@ -20,16 +20,14 @@
         <div class="container" data-aos="fade-up">
             <h1><?= $row['judul'] ?> </h1><br>
             <div class="row">
-                <div class="col-lg-9 col-md-12 p-3">
-                    <img src="<?php echo base_url(); ?>assets/images/upload/<?= $row['image']; ?>" alt="" class="img-fluid rounded">
+                <div class="container">
+                    <img src="<?php echo base_url(); ?>assets/images/upload/<?= $row['image']; ?>" width="100%" alt="" class="img-fluid rounded">
                     <br><br>
                     <p><?= $row['isi'] ?> </p>
                     <br>
                     <p>Dipublish pada : &nbsp; <?= $row['tanggal']; ?> </p>
                 </div>
-                <div class="col-lg-3 col-md-12">
-                    
-                </div>
+
             </div>
         </div>
     </section>

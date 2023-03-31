@@ -73,16 +73,14 @@
                 <label for="jabatan"> Jabatan </label><br>
                 <select class="form-control" name="jabatan" required oninvalid="this.setCustomValidity('Pilih Jabatan disini')" oninput="setCustomValidity('')">
                   <option value="">:: Pilih Jabatan ::</option>
-                  <option value="1">Ketua</option>
-                  <option value="2">Wakil Ketua</option>
-                  <option value="3">Sekretaris 1</option>
-                  <option value="4">Sekretaris 2</option>
-                  <option value="5">Bendahara</option>
-                  <option value="6">Penanggungjawab sekaligus Pengajar Akhlak</option>
-                  <option value="7">Bidang Pendidikan</option>
-                  <option value="8">Pelaksana Harian</option>
-                  <option value="9">Juru Masak</option>
-                  <option value="10">Admin</option>
+                  <option value="1">Kepala Sekolah</option>
+                  <option value="2">Wakil Kepala Sekolah</option>
+                  <option value="3">Kesiswaan</option>
+                  <option value="4">Kurikulum</option>
+                  <option value="5">Wali Kelas</option>
+                  <option value="6">Tata Usaha</option>
+                  <option value="7">BK</option>
+                  <option value="8">Pustakawan</option>
                 </select>
               </div>
 

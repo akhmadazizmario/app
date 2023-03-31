@@ -11,7 +11,7 @@ class Anak extends CI_Controller
   {
     parent::__construct();
 
-    $this->load->model(array('M_user', 'M_pengurus', 'M_anak', 'M_jenis_masalah', 'M_keadaan_saat_ini', 'M_akta', 'M_alasan_masuk_panti', 'M_jenis_bantuan'));
+    $this->load->model(array('M_user', 'M_pengurus', 'M_daftar', 'M_anak', 'M_jenis_masalah', 'M_keadaan_saat_ini', 'M_akta', 'M_alasan_masuk_panti', 'M_jenis_bantuan'));
     belum_login();
     //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
@@ -21,7 +21,7 @@ class Anak extends CI_Controller
   {
     $data = array(
       'data' => $this->M_anak->GetAll()->result_array(),
-      'judul' => 'Data Anak',
+      'judul' => 'Data Siswa',
     ); //u can use library array
     $this->template->load($this->foldertemplate . 'template', $this->folder . 'read', $data);
   }
@@ -42,25 +42,36 @@ class Anak extends CI_Controller
 
   public function saveanak()
   {
-    $data_anak = array( //fungsi array disini adalah untuk mengumpulkan data
+    // $config['upload_path'] = './assets/images/'; //path folder
+    // $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
+    // $config['encrypt_name'] = TRUE;
+    // $this->upload->initialize($config);
+
+    // if (!empty($_FILES['img_berita']['name'])) {
+    //     if ($this->upload->do_upload('img_berita')) {
+    //         $img = $this->upload->data_anak();
+    //         $this->ImgThumbs($img['file_name']);
+    //         $title = $this->input->post('title', TRUE);
+    //         $img_berita = $img['file_name'];
+
+    $data_anak = array( //fungsi array disini adalah untuk mengumpulkan data 
       'nik_anak' => $this->input->post('nik_anak'),
+      'alamat' => $this->input->post('alamat'),
+      'no_hp' => $this->input->post('no_hp'),
       'nama_anak' => $this->input->post('nama_anak'), //u can use library cipost
       'jk_anak' => $this->input->post('jk_anak'),
       'tempat_lahir_anak' => $this->input->post('tempat_lahir_anak'),
       'tgl_lahir_anak' => $this->input->post('tgl_lahir_anak'),
-      'umur' => $this->input->post('umur'),
-      'alamat' => $this->input->post('alamat'),
+      'asal_paud' => $this->input->post('asal_paud'),
       'nama_ibu_kandung' => $this->input->post('nama_ibu_kandung'),
       'nama_bapak_kandung' => $this->input->post('nama_bapak_kandung'),
-      'pekerjaan_ibu' => $this->input->post('pekerjaan_ibu'),
-      'pekerjaan_ayah' => $this->input->post('pekerjaan_ayah'),
       'agama' => $this->input->post('agama'),
       'pendidikan' => $this->input->post('pendidikan'),
       'tahun_masuk' => $this->input->post('tahun_masuk'),
-      'no_hp' => $this->input->post('no_hp'),
       'status' => 4,
+      'pekerjaan_ayah' => $this->input->post('pekerjaan_ayah'),
+      'pekerjaan_ibu' => $this->input->post('pekerjaan_ibu'),
     );
-
     $data_detail = array( //fungsi array disini adalah untuk mengumpulkan data
       'nik_anak' => $this->input->post('nik_anak'),
       'jenis_masalah' => $this->input->post('jenis_masalah'), //u can use library cipost
@@ -73,15 +84,10 @@ class Anak extends CI_Controller
       'jenis_bantuan' => $this->input->post('jenis_bantuan'),
       'tahun_bantuan' => $this->input->post('tahun_bantuan'),
     );
-    if ($this->M_anak->cek_nik($this->input->post('nik_anak'))->num_rows() > 0) {
-      $this->session->set_flashdata('error', "NIK <b>$data_detail[nik_anak]</b> sudah dipakai anak lain, silahkan ganti dengan yang berbeda");
-      redirect('anak/tambah', 'refresh');
-    } else {
-      $this->M_anak->save($data_anak);
-      $this->M_anak->savedetail($data_detail);
-      $this->session->set_flashdata('success', 'Data berhasil disimpan');
-      redirect('anak', 'refresh');
-    }
+    $this->M_daftar->save($data_anak);
+    $this->M_daftar->savedetail($data_detail);
+    $this->session->set_flashdata('success', 'Berhasil mendaftar, cek whatsapp kamu untuk pemberitahuan lebih lanjut lagi');
+    redirect('anak', 'refresh');
   }
 
   public function edit()
@@ -127,7 +133,7 @@ class Anak extends CI_Controller
       'jk_anak' => $this->input->post('jk_anak'),
       'tempat_lahir_anak' => $this->input->post('tempat_lahir_anak'),
       'tgl_lahir_anak' => $this->input->post('tgl_lahir_anak'),
-      'umur' => $this->input->post('umur'),
+      'asal_paud' => $this->input->post('asal_paud'),
       'alamat' => $this->input->post('alamat'),
       'nama_ibu_kandung' => $this->input->post('nama_ibu_kandung'),
       'nama_bapak_kandung' => $this->input->post('nama_bapak_kandung'),

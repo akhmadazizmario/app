@@ -21,8 +21,13 @@
                         <form action="<?= base_url('pengaturan/update/' . $row['id_pengaturan']); ?>" method="post" enctype="multipart/form-data">
                             <input type="hidden" class="form-control" name="id_pengaturan" value="<?= $row['id_pengaturan'] ?>">
                             <div class="form-group">
-                                <label for="Judul"> no HP :</label><br>
+                                <label for="Judul"> no.Telp Sekolah :</label><br>
                                 <input class="form-control" id="no_hp" type="number" name="no_hp" value="<?= $row['no_hp'] ?>" required oninvalid="this.setCustomValidity('no hp Wajib Diisi')" oninput="this.setCustomValidity('')">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="whatsapp"> Nomor Whats App </label><br>
+                                <input class="form-control" id="whatsapp" type="text" name="whatsapp" placeholder="Masukkan Nomor whatsapp" value="<?= $row['whatsapp'] ?>" required oninvalid="this.setCustomValidity('No Whats App Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
                             <div class="form-group">
@@ -47,38 +52,33 @@
 
 
                             <div class="form-group">
-                                <label for="whatsapp"> Nomor Whats App </label><br>
-                                <input class="form-control" id="whatsapp" type="text" name="whatsapp" placeholder="Masukkan Nomor whatsapp" value="<?= $row['whatsapp'] ?>" required oninvalid="this.setCustomValidity('No Whats App Wajib Diisi')" oninput="this.setCustomValidity('')">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="nama_kepala_ponpes"> Nama Kepala Ponpes </label><br>
+                                <label for="nama_kepala_ponpes"> Nama Kepala Sekolah </label><br>
                                 <input class="form-control" id="nama_kepala_ponpes" type="text" name="nama_kepala_ponpes" placeholder="Masukkan nama_kepala_ponpes" value="<?= $row['nama_kepala_ponpes'] ?>" required oninvalid="this.setCustomValidity('nama_kepala_ponpes Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <label for="fasilitas"> Fasilitas </label>
                                 <textarea id="tiny" name="fasilitas" value="<?= $row['fasilitas'] ?>" placeholder="Masukkan fasilitas"><?= $row['fasilitas'] ?></textarea>
-                            </div>
+                            </div>-->
 
                             <div class="form-group">
-                                <label for="instagram"> Link Instagram ponpes </label><br>
+                                <label for="instagram"> Link Instagram Sekolah </label><br>
                                 <input class="form-control" id="instagram" type="text" name="instagram" placeholder="Masukkan Link instagram" value="<?= $row['instagram'] ?>" required oninvalid="this.setCustomValidity('Link instagram Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
                             <div class="form-group">
-                                <label for="facebook"> Link Facebook ponpes </label><br>
+                                <label for="facebook"> Link Facebook Sekolah </label><br>
                                 <input class="form-control" id="facebook" type="text" name="facebook" placeholder="Masukkan Link facebook" value="<?= $row['facebook'] ?>" required oninvalid="this.setCustomValidity('Link facebook Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
                             <div class="form-group">
-                                <label for="youtube"> Link Youtube ponpes </label><br>
+                                <label for="youtube"> Link Youtube Sekolah </label><br>
                                 <input class="form-control" id="youtube" type="text" name="youtube" placeholder="Masukkan Link youtube" value="<?= $row['youtube'] ?>" required oninvalid="this.setCustomValidity('Link Youtube Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
                             <?php if ($row['image'] != null) { ?>
                                 <div class="form-group">
-                                    <label class="form-label"> Foto Ketua Ponpes</label> <br>
+                                    <label class="form-label"> Foto Kepala Sekolah</label> <br>
                                     <img src="<?= base_url('assets/images/upload/' . $row['image']) ?>" alt="" width="80px"> </td>
                                 </div>
                             <?php } ?>

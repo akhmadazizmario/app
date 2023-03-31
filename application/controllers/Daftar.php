@@ -11,14 +11,14 @@
             //Codeigniter : Write Less Do More
         }
 
-        public function tambah()
+        public function siswabaru()
         {
             $data = array(
                 'judul' => 'Pendaftaran',
                 'user' => $this->M_daftar->GetAll(),
                 'footer' => $this->M_pengaturan->GetAll()->result_array(),
             );
-            $this->load->view('frontend/header');
+            $this->load->view('frontend/header', $data);
             $this->load->view('frontend/daftar/index', $data);
             $this->load->view('frontend/footer', $data);
         }
@@ -86,7 +86,7 @@
                 'jk_anak' => $this->input->post('jk_anak'),
                 'tempat_lahir_anak' => $this->input->post('tempat_lahir_anak'),
                 'tgl_lahir_anak' => $this->input->post('tgl_lahir_anak'),
-                'umur' => $this->input->post('umur'),
+                'asal_paud' => $this->input->post('asal_paud'),
                 'nama_ibu_kandung' => $this->input->post('nama_ibu_kandung'),
                 'nama_bapak_kandung' => $this->input->post('nama_bapak_kandung'),
                 'agama' => $this->input->post('agama'),

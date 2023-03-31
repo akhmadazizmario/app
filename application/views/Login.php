@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masuk | ePonpes</title>
-    <meta content="Merupakan Website Resmi dari Pondok Pesantren Ridhyatul Solikhin - Kabupaten Tegal" name="description">
-    <meta content="ponpes,islamic,school,kemenag,pp,sdit,sekolahdasar,islam,pendidikanislam,ifs" name="keywords">
+    <title>Masuk | E Sekolah</title>
+    <meta content="Merupakan Website Resmi dari SD NEGERI MEJASEM BARAT 01 - Kabupaten Tegal" name="description">
+    <meta content="sdn,sd negeri,school,kemenag,pp,sdit,sekolahdasar,islam,pendidikanislam,ifs" name="keywords">
 
     <!-- SEO -->
-    <meta property="og:title" content="PP Ridhyatul Solikhin - Kab. Tegal">
-    <meta property="og:description" content="Merupakan Website Resmi dari Pondok Pesantren Ridhyatul Solikhin - Kabupaten Tegal">
+    <meta property="og:title" content="SD NEGERI MEJASEM BARAT 01 - Kab. Tegal">
+    <meta property="og:description" content="Merupakan Website Resmi dari SD NEGERI MEJASEM BARAT 01- Kabupaten Tegal">
     <meta property="og:image" content="<?php echo base_url() ?>assets/frontend/img/p2.jpg">
     <meta property="og:url" content="<?php echo base_url() ?>">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="<?= base_url() ?>assets/frontend/img/logo_ponpes.jpg" />
+    <link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
+    <link href="<?= base_url() ?>assets/images/logo.png" rel="apple-touch-icon">
 
     <!-- Vendor CSS -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/login/') ?>vendor/bootstrap/bootstrap.min.css">
@@ -54,7 +55,7 @@
 
                                 <!-- Judul Aplikasi -->
                                 <h1 class="my-4 text-center">
-                                    ePonpes
+                                    E SEKOLAH
                                 </h1>
 
                                 <!-- Peringatan -->
@@ -123,7 +124,7 @@
                                     </script>
                                 </h2>
                                 <!-- Deskripsi Aplikasi -->
-                                <p>Layanan Sistem Informasi Management Pondok Pesantren Ridyhatul Solikhin, Kabupaten Tegal</p>
+                                <p>Layanan Sistem Informasi Management SDN MEJASEM BARAT 01, Kecamatan Kramat.</p>
                             </div>
                         </div>
                     </div>

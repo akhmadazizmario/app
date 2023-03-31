@@ -21,18 +21,18 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Foto Kepala pp</th>
-                                    <th>Kepala Ponpes</th>
-                                    <th>no Hp Ponpes</th>
-                                    <th>Email Ponpes</th>
+                                    <th>Foto Kepala Sekolah</th>
+                                    <th>Kepala Sekolah</th>
+                                    <!--<th>no.Telp Sekolah</th>-->
+                                    <th>no. whats app</th>
+                                    <!--<th>Email Sekolah</th>-->
                                     <th>Pendaftaran dibuka </th>
                                     <th>Batas pendaftaran siswa</th>
                                     <th>periode tahun ajar </th>
-                                    <th>no. whats app</th>
-                                    <th>Fasilitas ponpes</th>
-                                    <th>Link instagram ponpes</th>
-                                    <th>Link facebook ponpes</th>
-                                    <th>Link youtube ponpes</th>
+                                    <!--<th>Fasilitas ponpes</th>
+                                    <th>Link instagram Sekolah</th>
+                                    <th>Link facebook Sekolah</th>
+                                    <th>Link youtube Sekolah</th>-->
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -43,16 +43,16 @@
                                         <td><?php echo $no ?></td>
                                         <td><img src="<?php echo base_url(); ?>assets/images/upload/<?php echo ucwords($row['image']); ?>" height="100px" width="250px"></td>
                                         <td><?php echo ucwords($row['nama_kepala_ponpes']); ?></td>
-                                        <td><?php echo ucwords($row['no_hp']); ?></td>
-                                        <td><?php echo ucwords($row['email']); ?></td>
+                                        <!--<td><?php echo ucwords($row['no_hp']); ?></td>-->
+                                        <td><?php echo ucwords($row['whatsapp']); ?></td>
+                                        <!--<td><?php echo ucwords($row['email']); ?></td>-->
                                         <td><?php echo ucwords($row['pendaftaran_awal']); ?></td>
                                         <td><?php echo ucwords($row['batas_akhir']); ?></td>
                                         <td><?php echo ucwords($row['periode']); ?></td>
-                                        <td><?php echo ucwords($row['whatsapp']); ?></td>
-                                        <td><?php echo ucwords($row['fasilitas']); ?></td>
+                                        <!--<td><?php echo ucwords($row['fasilitas']); ?></td>
                                         <td><?php echo ucwords($row['instagram']); ?></td>
                                         <td><?php echo ucwords($row['facebook']); ?></td>
-                                        <td><?php echo ucwords($row['youtube']); ?></td>
+                                        <td><?php echo ucwords($row['youtube']); ?></td>-->
                                         <td>
                                             <a class="btn btn-sm btn-secondary rounded m-1" href="<?= base_url('pengaturan/edit/' . $row['id_pengaturan']) ?>"> <i class="fa fa-edit"></i> Edit </a>
                                         </td>

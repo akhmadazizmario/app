@@ -3,7 +3,7 @@
         <div class="container">
 
             <div class="d-flex justify-content-between align-items-center">
-                <h2 class="text-dark">Formulir Data Pendaftaran</h2>
+                <h2 class="text-dark">Formulir Data Pendaftaran SDN MEJASEM BARAT 01</h2>
                 <ol>
                     <li><a href="<?php echo base_url('utama') ?>">Home</a></li>
                     <li class="text-dark">Pendaftaran</li>
@@ -18,7 +18,7 @@
                 <div class="animated fadeIn">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title"><i class="bi bi-exclamation-circle"></i>&nbsp;<a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Klik Lihat Petunjuk</a></strong>
+                            <strong class="card-title"><i class="bi bi-exclamation-circle"></i>&nbsp;<a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-danger"> Klik Lihat Petunjuk Pendafatarn</a></strong>
                         </div>
 
                         <!-- Petunjuk Modal -->
@@ -33,14 +33,16 @@
                                         <p>
                                             Dimohon untuk mengisi formulir pendaftaran dengan data yang benar dan valid.
                                             <br><br>
-                                            <strong>Pengumuman Seleksi : </strong><br>
-                                            Untuk Pengumuman seleksi akan kami hubungi melalui <strong class="text-primary">Nomor HP/Whatsapp</strong> calon Santri.
-                                            <br><br>
-                                            <strong>Berkas Persyaratan : </strong><br>
-                                            Untuk berkas Persyaratan Harap<strong> Difoto dengan jelas yah</strong>, Tidak boleh ada yang blur karena nanti bisa berpengaruh di tahap seleksi.
+                                            <strong>Notice : </strong><br>
+                                            <i class="bi bi-check"></i> isi semua data yang ada tulisan <strong> (* wajib diisi ) </strong><br>
+                                            <i class="bi bi-check"></i> Jika <strong> (* opsi/tidak wajib ) </strong> berarti tidak wajib diisi yah. <br>
+                                            <i class="bi bi-check"></i> Jika ada kesalahan upload data, bisa hubungi kami secepatnya agar bisa diubah. <br>
+                                            <i class="bi bi-check"></i> Klik Daftar. <br>
+                                            <i class="bi bi-check"></i> Tunggu pemberitahuan lebih lanjut lewat whatsapp/no.hp yang terdaftar.
                                             <br><br>
                                             <strong>Catatan : </strong><br>
-                                            <strong class="text-primary">Untuk Link Berkas Ijasah terakhir khusus untuk yang lulsan SD ,SMP,SMK silahkan upload ijasah yang sebelumnya. untuk anak-anak yang belom ada ijasah silahkan isi dengan tanda (-)</strong>
+                                            Untuk berkas Akta & Kartu Keluarga Harap<strong> Difoto dengan jelas yah</strong>, Tidak boleh ada yang blur karena nanti bisa berpengaruh di tahap seleksi.
+                                            <br>
                                         </p>
                                     </div>
                                     <div class="modal-footer">
@@ -81,7 +83,7 @@
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="no_hp"><strong> No HP / whatsapp</strong> ( *Wajib diisi & <font color="red">wajib Aktif !</font> )</label><br>
+                                            <label for="no_hp"><strong> No HP / whatsapp</strong> ( *Wajib diisi )</label><br>
                                             <input class="form-control" id="no_hp" type="number" name="no_hp" placeholder="Masukkan Nomor Handphone yang bisa dihubungi" required oninvalid="this.setCustomValidity('No hp Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
@@ -105,8 +107,8 @@
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="umur"><strong> Umur Calon Santri </strong>( *wajib diisi )</label><br>
-                                            <input class="form-control" id="umur" type="number" name="umur" placeholder="Masukkan Umur kamu" required oninvalid="this.setCustomValidity('Umur Wajib Diisi')" oninput="this.setCustomValidity('')">
+                                            <label for="asal_paud"><strong> asal_paud Calon Siswa </strong>( *wajib diisi )</label><br>
+                                            <input class="form-control" id="asal_paud" type="text" name="asal_paud" placeholder="Masukkan asal_paud kamu" required oninvalid="this.setCustomValidity('Umur Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
                                         <div class="form-group">
@@ -132,10 +134,10 @@
                                             <label for="pekerjaan_ayah"><strong> Pekerjaan Ayah </strong>( *wajib diisi )</label><br>
                                             <input class="form-control" id="pekerjaan_ayah" type="text" name="pekerjaan_ayah" placeholder="Masukkan Pekerjaan ayah" required oninvalid="this.setCustomValidity('Pekerjaan ayah wajib diisi')" oninput="this.setCustomValidity('')">
                                         </div>
-                                        <br>
+
                                         <div class="form-group mt-3">
-                                            <label for="ktp"><strong> Foto KTP Ayah/Ibu </strong>( *wajib diisi )</label><br>
-                                            <input id="ktp" type="file" name="ktp" class="form-control" required>
+                                            <label for="ktp"><strong> Foto KTP Ayah/Ibu </strong>( * Opsional / tidak wajib diisi )</label><br>
+                                            <input id="ktp" type="file" name="ktp" class="form-control">
                                             <small class="help-block"> Maks. 2MB</small>
                                         </div>
                                         <br>
@@ -144,25 +146,17 @@
                                             <select class="form-control" name="agama" required oninvalid="this.setCustomValidity('Pilih Agama disini')" oninput="setCustomValidity('')">
                                                 <option value="">:: Pilih Agama ::</option>
                                                 <option value="1">Islam</option>
+                                                <option value="2">Kristen</option>
+                                                <option value="3">Katholik</option>
+                                                <option value="4">Hindu</option>
+                                                <option value="5">Budha</option>
+                                                <option value="6">Konghucu</option>
                                             </select>
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="pendidikan"><strong> Kategori pendaftaran jenjang Pendidikan </strong>(*wajib diisi)</label><br>
-                                            <select class="form-control" name="pendidikan" required oninvalid="this.setCustomValidity('Pilih Pendidikan disini')" oninput="setCustomValidity('')">
-                                                <option value="">:: Pilih Kategori Pendaftaran ::</option>
-                                                <option value="1">Tafidz ( ponpes )</option>
-                                                <option value="2">Kitab ( ponpes )</option>
-                                                <option value="3">RTQ ( Rumah Tafidz Qur'an )</option>
-                                            </select>
+                                            <input class="form-control" id="pendidikan" type="hidden" name="pendidikan" value="1">
                                         </div>
-                                        <br>
-                                        <div class="form-group">
-                                            <label for="scan_ijasah"><strong>Foto Ijazah Pendidikan Terakhir Calon Santri</strong> ( optional )</label><br>
-                                            <input id="scan_ijasah" type="file" name="scan_ijasah" class="form-control">
-                                            <small class="help-block"> Maks. 2MB</small>
-                                        </div>
-                                        <br>
                                         <div class="form-group">
                                             <label for="scan_kk"><strong>Foto Kartu Keluarga</strong> ( *wajib diisi )</label><br>
                                             <input id="scan_kk" type="file" name="scan_kk" class="form-control" required>
@@ -170,7 +164,7 @@
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="scan_akte"><strong>Foto Akta Kelahiran Calon Santri</strong>( *wajib diisi )</label><br>
+                                            <label for="scan_akte"><strong>Foto Akta Kelahiran Calon Siswa</strong>( *wajib diisi )</label><br>
                                             <input id="scan_akte" type="file" name="scan_akte" class="form-control" required>
                                             <small class="help-block"> Maks. 2MB</small>
                                         </div>
@@ -180,9 +174,10 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="foto_anak"><strong> Upload Pas Foto Calon Santri ( 3x4 ) </strong> ( *wajib diisi )</label><br>
-                                            <input id="foto_anak" type="file" name="foto_anak" class="form-control" required>
-                                            <small class="help-block"> Maks. 2MB</small>
+                                            <label for="foto_anak"><strong>Foto Calon Siswa ( 3x4 ) </strong> ( * opsional / tidak wajib diisi )</label><br>
+                                            <input id="foto_anak" type="file" name="foto_anak" class="form-control">
+                                            <small class="help-block"> Maks. 2MB </small><br>
+                                            <small class="help-block text-danger">Note! : Foto boleh bebas tetapi harus berpakaian sopan </small>
                                         </div>
                                         <br>
                                         <div class="form-group">

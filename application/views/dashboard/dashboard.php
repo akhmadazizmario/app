@@ -38,7 +38,7 @@
               <div class="stat-widget-one">
                 <div class="stat-icon dib"><i class="fa fa-users text-success border-success"></i></div>
                 <div class="stat-content dib">
-                  <div class="stat-text">Total Pengurus</div>
+                  <div class="stat-text">Total Guru</div>
                   <div class="stat-digit"><?= $pengurus->num_rows(); ?></div>
                 </div>
               </div>
@@ -54,7 +54,7 @@
             <div class="stat-widget-one">
               <div class="stat-icon dib"><i class="fa fa-female text-primary border-primary"></i></div>
               <div class="stat-content dib">
-                <div class="stat-text">Total Anak</div>
+                <div class="stat-text">Total Siswa</div>
                 <div class="stat-digit"><?= $anak->num_rows(); ?></div>
               </div>
             </div>
@@ -80,9 +80,9 @@
           <div class="card border-0 shadow-sm">
             <div class="card-body">
               <div class="stat-widget-one">
-                <div class="stat-icon dib"><i class="fa fa-inbox text-success border-success"></i></div>
+                <div class="stat-icon dib"><i class="ti-money text-danger border-danger"></i></div>
                 <div class="stat-content dib">
-                  <div class="stat-text">Saldo Terakhir</div>
+                  <div class="stat-text">Saldo Dana Terakhir</div>
                   <div class="stat-digit"><?= rupiah($saldo_akhir); ?></div>
                 </div>
               </div>
@@ -286,12 +286,11 @@
           </div>
         </div>
       </div>
-
       <div class="col-md-4">
         <div class="card border-0 shadow-sm rounded">
           <div class="card-body">
             <div class="stat-widget-one">
-              <div class="stat-icon dib"><i class="ti-money text-danger border-danger"></i></div>
+              <div class="stat-icon dib"><i class="fa fa-inbox text-success border-success"></i></div>
               <div class="stat-content dib">
                 <div class="stat-text">Total Inventaris</div>
                 <div class="stat-digit"><?= $inventaris->num_rows(); ?></div>
@@ -334,7 +333,7 @@
         <div class="col-lg-6">
           <div class="card border-0 shadow-sm rounded">
             <div class="card-body">
-              <h4 class="mb-3">Grafik Anak</h4>
+              <h4 class="mb-3">Grafik Siswa</h4>
               <canvas id="anakBarChart"></canvas>
             </div>
           </div>
@@ -435,7 +434,7 @@
           var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-              labels: ["2019", "2020", "2021", "2022"],
+              labels: ["2020", "2021", "2022", "2023"],
               datasets: [{
                 label: "Jumlah Anak Daftar Pesantren",
                 data: [<?= $tujuhbelas->num_rows() ?>, <?= $delapanbelas->num_rows() ?>, <?= $sembilanbelas->num_rows() ?>, <?= $sekarang->num_rows() ?>],

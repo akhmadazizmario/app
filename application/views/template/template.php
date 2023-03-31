@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta charset="UTF-8">
-  <meta name="keywords" content="E-PONPES">
+  <meta name="keywords" content="E-SEKOLAH">
   <meta name="author" content="HNF">
-  <meta name="description" content="E-PONPES">
+  <meta name="description" content="E-SEKOLAH">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manajemen <?= $this->fungsi->user_login()->nama ?> E-ponpes</title>
+  <title>Manajemen <?= $this->fungsi->user_login()->nama ?> Sekolah</title>
 
-  <link rel="apple-touch-icon" href="apple-icon.png">
-  <link rel="shortcut icon" href="favicon.ico">
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="<?= base_url() ?>assets/frontend/img/logo_ponpes.jpg" />
+  <link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
+  <link href="<?= base_url() ?>assets/images/logo.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="<?= base_url() ?>assets/frontend/img/.jpg" />
   <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/themify-icons/css/themify-icons.css">
@@ -60,7 +61,7 @@
         <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand p-2" href="<?= site_url('Dashboard') ?>"><img class="rounded" src="<?= base_url() ?>assets/frontend/img/logo_ponpes.jpg" alt="" style="width: 70px;"> &nbsp; E-PONPES</a>
+        <a class="navbar-brand p-2" href="<?= site_url('Dashboard') ?>"><img class="rounded" src="<?= base_url() ?>assets/images/emm.png" alt="" style="width: 70px;"> &nbsp; E-SEKOLAH</a>
       </div>
 
       <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -73,18 +74,6 @@
           <!-- Role Admin -->
           <?php if ($this->fungsi->user_login()->role == 0) { ?>
 
-            <!-- Bagian Dropdown Manajemen Data -->
-            <li class="menu-item-has-children dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i> Manajemen Data</a>
-              <ul class="sub-menu children dropdown-menu">
-                <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('akta') ?>">Akta</a></li>
-                <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('alasan_masuk_panti') ?>">Alasan Masuk</a></li>
-                <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('jenis_masalah') ?>">Jenis Masalah</a></li>
-                <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('jenis_bantuan') ?>">Jenis Bantuan</a></li>
-                <li><i class="ti ti-pencil-alt"></i><a href="<?= base_url('keadaan_saat_ini') ?>">Keadaan Saat Ini</a></li>
-              </ul>
-            </li>
-
             <!-- Manajemen Pengguna, Pengurus, dan Santri -->
             <li>
               <a href="<?= base_url('user') ?>"> <i class="menu-icon ti ti-user"></i>Manajemen Pengguna</a>
@@ -94,7 +83,7 @@
             </li>
 
             <li>
-              <a href="<?= base_url('assatidz') ?>"> <i class="menu-icon fa fa-group"></i>Manajamen Assatidz</a>
+              <a href="<?= base_url('guru') ?>"> <i class="menu-icon fa fa-group"></i>Manajamen Guru</a>
             </li>
 
             <!-- Bagian Dropdown Manajemen Data -->
@@ -116,7 +105,7 @@
           <!-- Role Pengurus -->
           <?php if ($this->fungsi->user_login()->role != 2) { ?>
             <li>
-              <a href="<?= base_url('anak') ?>"> <i class="menu-icon fa fa-female"></i>Manajamen Santri</a>
+              <a href="<?= base_url('anak') ?>"> <i class="menu-icon fa fa-female"></i>Manajamen Siswa</a>
             </li>
           <?php } ?>
           <!-- Akhir Role -->
@@ -127,7 +116,7 @@
               <a href="<?= base_url('donatur') ?>"> <i class="menu-icon ti ti-id-badge"></i>Manajamen Donatur</a>
             </li>
             <li>
-              <a href="<?= base_url('keuangan') ?>"> <i class="menu-icon fa fa-money"></i>Manajamen Keuangan</a>
+              <a href="<?= base_url('keuangan') ?>"> <i class="menu-icon fa fa-money"></i>Manajamen Dana Keuangan</a>
             </li>
           <?php } ?>
           <!-- Akhir Role -->
@@ -141,12 +130,12 @@
                 <li><i class="fa fa-inbox"></i><a href="<?= base_url('surat_masuk') ?>">Surat Masuk</a></li>
                 <li><i class="fa fa-share"></i><a href="<?= base_url('surat_keluar') ?>">Surat Keluar</a></li>
               </ul>
-            </li>
             <li>
               <a href="<?= base_url('inventaris') ?>"> <i class="menu-icon fa fa-edit"></i>Inventaris</a>
             </li>
             <li>
               <a href="<?= base_url('buku_tamu') ?>"> <i class="menu-icon fa fa-book"></i>Buku Tamu</a>
+            </li>
             </li>
           <?php } ?>
           <!-- Akhir Role -->
@@ -156,7 +145,7 @@
             <ul class="sub-menu children dropdown-menu">
               <?php if ($this->fungsi->user_login()->role == 0) { ?>
                 <li><i class="fa fa-file-o "></i><a href="<?= base_url('lap_pengurus') ?>">Pengurus</a></li>
-                <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_anak') ?>">Anak</a></li>
+                <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_anak') ?>">Siswa</a></li>
                 <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_donatur') ?>">Donatur</a></li>
                 <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_keuangan') ?>">Keuangan</a></li>
                 <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_surat_masuk') ?>">Surat Masuk</a></li>
@@ -172,7 +161,7 @@
                 <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_buku_tamu') ?>">Buku Tamu</a></li>
               <?php } ?>
               <?php if ($this->fungsi->user_login()->role == 2) { ?>
-                <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_donatur') ?>">Donatur</a></li>
+
                 <li><i class="fa fa-file-o"></i><a href="<?= base_url('lap_keuangan') ?>">Keuangan</a></li>
               <?php } ?>
             </ul>
@@ -183,10 +172,13 @@
             <a href="<?= base_url('brosur') ?>"> <i class="menu-icon fa fa-file-text"></i>Brosur</a>
           </li>
 
-          <!-- Pengaturan Website -->
-          <li>
-            <a href="<?= base_url('pengaturan') ?>"> <i class="menu-icon fa fa-cog"></i>Pengaturan website</a>
-          </li>
+          <?php if ($this->fungsi->user_login()->role == 0) { ?>
+
+            <!-- Pengaturan Website -->
+            <li>
+              <a href="<?= base_url('pengaturan') ?>"> <i class="menu-icon fa fa-cog"></i>Pengaturan website</a>
+            </li>
+          <?php } ?>
 
           <!-- Jurnalistik -->
           <h3 class="menu-title">Jurnalistik</h3>
@@ -194,8 +186,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-newspaper-o"></i>Manajamen Berita</a>
             <ul class="sub-menu children dropdown-menu">
               <li><i class="fa ti-pencil-alt"></i><a href="<?= base_url('blog/tambah') ?>">Tambah Berita</a></li>
-              <li><i class="fa fa-list-alt"></i><a href="<?= base_url('blog') ?>">Daftar Berita Ponpes</a></li>
-              <li><i class="fa fa-picture-o"></i><a href="<?= base_url('galeri/read') ?>">Gallery Ponpes</a></li>
+              <li><i class="fa fa-list-alt"></i><a href="<?= base_url('blog') ?>">Daftar Berita Sekolah</a></li>
+              <li><i class="fa fa-picture-o"></i><a href="<?= base_url('galeri/read') ?>">Gallery Sekolah</a></li>
             </ul>
           </li>
 

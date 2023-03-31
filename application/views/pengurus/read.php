@@ -25,8 +25,8 @@
                   <th>Foto</th>
                   <th>NIK</th>
                   <th>Nama</th>
-                  <th>TTL</th>
-                  <th>Umur</th>
+                  <!--<th>TTL</th>
+                  <th>Umur</th>-->
                   <th>Mulai Masuk</th>
                   <th>Telepon</th>
                   <th>Jabatan</th>
@@ -46,31 +46,27 @@
                     </td>
                     <td><?php echo $row['nik_pengurus']; ?></td>
                     <td><?php echo ucwords($row['nama_pengurus']); ?></td>
-                    <td><?php echo ucwords($row['tempat_lahir_pengurus']) . ', ' . date_indo($row['tgl_lahir_pengurus']) ?></td>
-                    <td><?= hitung_umur($row['tgl_lahir_pengurus']) ?></td>
+                    <!--<td><?php echo ucwords($row['tempat_lahir_pengurus']) . ', ' . date_indo($row['tgl_lahir_pengurus']) ?></td>
+                    <td><?= hitung_umur($row['tgl_lahir_pengurus']) ?></td>-->
                     <td><?= date_indo($row['mulai_kerja']); ?></td>
                     <td><?php echo $row['telp_pengurus']; ?></td>
                     <td>
                       <?php if ($row['jabatan'] == 1) { ?>
-                        <span class="badge badge-primary">Ketua</span>
+                        <span class="badge badge-primary">Kepala Sekolah</span>
                       <?php } elseif ($row['jabatan'] == 2) { ?>
-                        <span class="badge badge-danger">Wakil Ketua</span>
+                        <span class="badge badge-danger">Wakil Kepala Sekolah</span>
                       <?php } elseif ($row['jabatan'] == 3) { ?>
-                        <span class="badge badge-danger">Sekretaris 1</span>
+                        <span class="badge badge-warning">Kesiswaan</span>
                       <?php } elseif ($row['jabatan'] == 4) { ?>
-                        <span class="badge badge-danger">Sekretaris 2</span>
+                        <span class="badge badge-danger">Kurikulum</span>
                       <?php } elseif ($row['jabatan'] == 5) { ?>
-                        <span class="badge badge-danger">Bendahara</span>
+                        <span class="badge badge-danger">Wali Kelas</span>
                       <?php } elseif ($row['jabatan'] == 6) { ?>
-                        <span class="badge badge-danger">Penanggungjawab sekaligus Pengajar Akhlak</span>
+                        <span class="badge badge-danger">Tata Usaha</span>
                       <?php } elseif ($row['jabatan'] == 7) { ?>
-                        <span class="badge badge-danger">Bidang Pendidikan</span>
-                      <?php } elseif ($row['jabatan'] == 8) { ?>
-                        <span class="badge badge-danger">Pelaksana Harian</span>
-                      <?php } elseif ($row['jabatan'] == 9) { ?>
-                        <span class="badge badge-danger">Juru Masak</span>
+                        <span class="badge badge-danger">BK</span>
                       <?php } else { ?>
-                        <span class="badge badge-success">Admin</span>
+                        <span class="badge badge-success">Pustakawan</span>
                       <?php } ?>
                     </td>
                     <td>
@@ -85,9 +81,9 @@
                     <td>
                       <?php if ($row['pendidikan'] == 1) { ?>
                         <span class="badge badge-primary">SMA/SMK/MA</span>
-                      <?php } elseif ($row['status'] == 2) { ?>
+                      <?php } elseif ($row['pendidikan'] == 2) { ?>
                         <span class="badge badge-danger">D3</span>
-                      <?php } elseif ($row['status'] == 3) { ?>
+                      <?php } elseif ($row['pendidikan'] == 3) { ?>
                         <span class="badge badge-danger">S1</span>
                       <?php } else { ?>
                         <span class="badge badge-success">S2</span>

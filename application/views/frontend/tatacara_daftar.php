@@ -29,25 +29,12 @@
                 <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center bg-white" data-aos="fade-up" data-aos-delay="100">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Masuk ke website ponpes riyadush sholihin tarub</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Persiapkan terlebih dahulu berkas-berkasnya</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Jika berkasnya sudah disiapkan, Klik Tombol Daftar Sekarang</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Isi formulir pendaftaran dengan data yang Valid!</h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Jika sudah diisi lalu klik Daftar dan akan muncul pesan "Pendaftaran berhasil" .
-                                </h5><br><br>
-                            </div>
-                            <div class="resume-item pb-0">
-                                <h5 class="card text-white bg-dark">Pendaftaran sudah diproses ponpes, untuk pemberitahuan selanjutnya akan diberitahu melalui <strong>No HP/Whatsapp</strong> calon santri.</h5>
-                            </div>
+                            <p><i class="bi bi-check"></i> Masuk Ke Website SDN MEJASEM BARAT 01</p>
+                            <P><i class="bi bi-check"></i> Persiapkan Terlebih Dahulu berkas-berkasnya</P>
+                            <p><i class="bi bi-check"></i> Klik Tombol Pendaftaran Peserta Didik</p>
+                            <p><i class="bi bi-check"></i> Isi formulir pendaftaran dengan data yang Valid!</p>
+                            <p><i class="bi bi-check"></i> Jika sudah diisi lalu klik Daftar Makas akan muncul pesan "Pendaftaran berhasil"</p>
+                            <p><i class="bi bi-check"></i> Pendaftaran sudah diproses, untuk pemberitahuan selanjutnya akan diberitahu melalui <strong>No HP/Whatsapp</strong> calon siswa.</p>
                         </div>
                     </div>
                 </div>

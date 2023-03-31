@@ -60,25 +60,21 @@
                 <th>Jabatan</th>
                 <td> : </td>
                 <td> <?php if ($row['jabatan'] == '1') { ?>
-                    Ketua
+                    Kepala Sekolah
                   <?php } else if ($row['jabatan'] == '2') { ?>
-                    Wakil Ketua
+                    Wakil Kepala Sekolah
                   <?php } else if ($row['jabatan'] == '3') { ?>
-                    Sekretaris 1
+                    Kesiswaan
                   <?php } else if ($row['jabatan'] == '4') { ?>
-                    Sekretaris 2
+                    Kurikulum
                   <?php } else if ($row['jabatan'] == '5') { ?>
-                    Bendahara
+                    Wali Kelas
                   <?php } else if ($row['jabatan'] == '6') { ?>
-                    Penanggungjawab sekaligus Pengajar Akhlak
+                    Tata Usaha
                   <?php } else if ($row['jabatan'] == '7') { ?>
-                    Bidang Pendidikan
-                  <?php } else if ($row['jabatan'] == '8') { ?>
-                    Pelaksana Harian
-                  <?php } else if ($row['jabatan'] == '9') { ?>
-                    Juru Masak
+                    BK
                   <?php } else { ?>
-                    Admin
+                    Pustakawan
                   <?php } ?>
                 </td>
               </tr>

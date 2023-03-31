@@ -67,8 +67,8 @@
               </div>
 
               <div class="form-group">
-                <label for="umur"> umur </label><br>
-                <input class="form-control" id="umur" type="text" name="umur" value="<?= $row['umur'] ?>" required oninvalid="this.setCustomValidity('Tempat Lahir Wajib Diisi')" oninput="this.setCustomValidity('')">
+                <label for="asal_paud"> asal paud </label><br>
+                <input class="form-control" id="asal_paud" type="text" name="asal_paud" value="<?= $row['asal_paud'] ?>" required oninvalid="this.setCustomValidity('Tempat Lahir Wajib Diisi')" oninput="this.setCustomValidity('')">
               </div>
 
               <div class="form-group">
@@ -110,12 +110,15 @@
               </div>
 
               <div class="form-group">
-                <label for="pendidikan"> Pendidikan</label><br>
+                <label for="pendidikan"> Kelas</label><br>
                 <select class="form-control" name="pendidikan" required oninvalid="this.setCustomValidity('Pilih Pendidikan disini')" oninput="setCustomValidity('')">
                   <option value="">:: Pilih Status ::</option>
-                  <option value="1" <?= $row['pendidikan'] == '1' ? 'selected' : null ?>>Tafidz (Ponpes)</option>
-                  <option value="2" <?= $row['pendidikan'] == '2' ? 'selected' : null ?>>Kitab (Ponpes)</option>
-                  <option value="3" <?= $row['pendidikan'] == '3' ? 'selected' : null ?>>RTQ (Rumah Tafidz Qur'an)</option>
+                  <option value="1" <?= $row['pendidikan'] == '1' ? 'selected' : null ?>>1</option>
+                  <option value="2" <?= $row['pendidikan'] == '2' ? 'selected' : null ?>>2</option>
+                  <option value="3" <?= $row['pendidikan'] == '3' ? 'selected' : null ?>>3</option>
+                  <option value="4" <?= $row['pendidikan'] == '4' ? 'selected' : null ?>>4</option>
+                  <option value="5" <?= $row['pendidikan'] == '5' ? 'selected' : null ?>>5</option>
+                  <option value="6" <?= $row['pendidikan'] == '6' ? 'selected' : null ?>>6</option>
                 </select>
               </div>
 
@@ -134,21 +137,6 @@
             </div>
             <p></p>
             <input id="foto_anak" type="file" name="foto_anak" class="form-control">
-            <small class="help-block"> Maks. 2MB</small>
-          </div>
-          <div class="form-group">
-            <label for="scan_ijasa">Link Berkas Ijasah Pendidikan Terakhir</label><br>
-            <?php
-            if ($row['scan_ijasah'] == '') {
-            ?>
-              <span class="btn btn-secondary"><i class="fa fa-exclamation"></i> tidak tersedia</span>
-            <?php
-            } else {
-            ?>
-              <a class="btn btn-primary" href="<?= base_url('upload/scan_ijasah/' . $row['scan_ijasah']); ?>" title="Download Ijazah" target='_blank'> <i class="fa fa-download"></i> Detail Ijazah </a>
-            <?php } ?>
-            <p></p>
-            <input id="scan_ijazah" type="file" name="scan_ijazah" class="form-control">
             <small class="help-block"> Maks. 2MB</small>
           </div>
 

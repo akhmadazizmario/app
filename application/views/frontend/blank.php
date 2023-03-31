@@ -17,7 +17,7 @@
                     <div class="content px-xl-5">
                         <h3>Panduan <strong>Pendaftaran</strong></h3>
                         <p>
-                            Jika calon santri mengalami kesulitan, kami siap membantu agar calon santri mendaftar dengan lancar.
+                            Jika calon siswa mengalami kesulitan, kami siap membantu agar calon siswa mendaftar dengan lancar.
                         </p>
                     </div>
                     <div class="accordion accordion-flush px-xl-5" id="faqlist">
@@ -30,7 +30,7 @@
                             </h3>
                             <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    untuk pendaftaran di website E-ponpes riyadus sholihin tegal gratis yah, tidak dipungut biaya apapun.
+                                    untuk pendaftaran di website SD NEGERI MEJASEM BARAT 01 sepenuhnya gratis alias tidak dipungut biaya sepeserpun.
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,8 @@
                             </h3>
                             <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    jika website mengalami error atau tidak bisa mendaftar di website, untuk selanjutnya bisa hubungi no whatsapp admin kami yah, untuk diproses lebih lanjut.
+                                    jika website mengalami error atau tidak bisa mendaftar di website, untuk selanjutnya bisa hubungi kami yah bisa lewat tombol whatsapp
+                                    di website kami, untuk diproses lebih lanjut.
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,8 @@
                             <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    jika ada kesalahan input silahkan menghubungi kami, dan kirim berkas yg diperlukan untuk diinput secara manual oleh pengurus.
+                                    jika ada kesalahan input silahkan menghubungi kami, dan kirim berkas yg diperlukan untuk
+                                    diinput secara manual oleh pengurus.
                                 </div>
                             </div>
                         </div>
@@ -82,7 +84,7 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Untuk pengumuman setelah klik daftar selanjutnya gimana yah ?
+                                    Untuk pengumuman setelah daftar selanjutnya gimana ya ?
                                 </button>
                             </h3>
                             <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">

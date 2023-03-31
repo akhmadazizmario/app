@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-	<title>Simapan Aisyiyah</title>
+	<title>RESERT PASSWORD - E SEKOLAH</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?= base_url('assets/login/') ?>images/logo.png" />
+	<!-- Favicons -->
+	<link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
+	<link href="<?= base_url() ?>assets/images/logo.png" rel="apple-touch-icon">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/login/') ?>vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -32,11 +34,11 @@
 <body>
 
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('<?= base_url('assets/') ?>images/pp6.jpg');">
+		<div class="container-login100" style="background-image: url('<?= base_url('assets/') ?>images/loho.png');">
 			<div class="wrap-login100 p-t-30" style="position: absolute; right: 100px; padding: 5px;">
-				<img src="<?= base_url('assets/login/images/logo.png') ?>" alt="" class="login-logo" style="width: 200px;">
+				<img src="<?= base_url('assets/images/logo.png') ?>" alt="" class="login-logo" style="width: 200px;">
 				<span class="login100-form-title p-b-41">
-					Pondok Pesantren Riyadus sholihin Tarub
+					SD NEGERI MEJASEM BARAT 01
 				</span>
 
 				<form class="login100-form validate-form p-b-33 p-t-5" method="post" action="<?= site_url('auth/reset_process') ?>">

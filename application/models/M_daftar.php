@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_daftar extends CI_Model
 {
-    private $table = 'data_santri';
+    private $table = 'data_siswa';
     private $pk    = 'nik_anak';
     private $table2 = 'detail_santri'; //this is table name
     private $pk2 = 'nik_anak';
