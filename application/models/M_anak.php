@@ -8,6 +8,7 @@ class M_anak extends CI_Model
   private $table2 = 'detail_santri'; //this is table name
   private $pk = 'nik_anak'; //this is primary key
   private $pk2 = 'nik_anak';
+  private $id  = 'id_anak';
 
 
   public function __construct()
@@ -20,9 +21,10 @@ class M_anak extends CI_Model
   {
     $pendidikan =  $this->input->post('pendidikan');
     $tahun_masuk = $this->input->post('tahun_masuk');
-    $status = $this->input->post('status');
+    $status = $this->input->post('status');;
 
-    $this->db->order_by($this->pk, 'DESC');
+
+    $this->db->order_by($this->id, 'desc');
     if ($this->input->post('umur') == 1) {
       $this->db->where('umur BETWEEN "7" and "11"');
     }
@@ -63,7 +65,7 @@ class M_anak extends CI_Model
   {
     unset($config);
     $config['upload_path']    = './upload/foto_anak/';
-    $config['allowed_types']  = '.gif|jpg|png|jpeg';
+    $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif';
     $config['max_size']       = 2048;
     $config['file_name']      = 'Foto Anak' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
@@ -140,7 +142,7 @@ class M_anak extends CI_Model
   {
     unset($config);
     $config['upload_path']    = './upload/foto_anak/';
-    $config['allowed_types']  = '.gif|jpg|png|jpeg';
+    $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif';
     $config['max_size']       = 2048;
     $config['file_name']      = 'Foto Anak' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
@@ -156,7 +158,7 @@ class M_anak extends CI_Model
   {
     unset($config);
     $config['upload_path']    = './upload/scan_ijasah';
-    $config['allowed_types']  = '.gif|jpg|png|jpeg';
+    $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif|pdf';
     $config['max_size']       = 2048;
     $config['file_name']      = 'Scan Ijasah' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
@@ -170,7 +172,7 @@ class M_anak extends CI_Model
   {
     unset($config);
     $config['upload_path']    = './upload/scan_kk';
-    $config['allowed_types']  = '.gif|jpg|png|jpeg';
+    $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif|pdf';
     $config['max_size']       = 2048;
     $config['file_name']      = 'Scan Kartu Keluarga' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
@@ -184,7 +186,7 @@ class M_anak extends CI_Model
   {
     unset($config);
     $config['upload_path']    = './upload/scan_akte';
-    $config['allowed_types']  = '.gif|jpg|png|jpeg';
+    $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif|pdf';
     $config['max_size']       = 2048;
     $config['file_name']      = 'Scan Kartu Akte Kelahiran' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 

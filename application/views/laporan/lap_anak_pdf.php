@@ -46,7 +46,6 @@
         <th>Agama</th>
         <th>Kelas</th>
         <th>Tahun Masuk</th>
-        <!--<th>Kategori</th>-->
         <th>Status</th>
     </tr>
 
@@ -102,13 +101,7 @@
                 <?php } ?>
             </td>
             <td><?php echo ucwords($row['tahun_masuk']); ?></td>
-            <!--<td>
-                <?php if ($row['id_kelas'] == '1') { ?>
-                    <span>Pondok Pesantren</span>
-                <?php } else { ?>
-                    <span> Rumah Tahfidz Qur'an</span>
-                <?php } ?>
-            </td>-->
+
             <td>
                 <?php if ($row['status'] == '1') { ?>
                     <span>Aktif</span>

@@ -56,6 +56,11 @@
                                 <input class="form-control" id="nama_kepala_ponpes" type="text" name="nama_kepala_ponpes" placeholder="Masukkan nama_kepala_ponpes" value="<?= $row['nama_kepala_ponpes'] ?>" required oninvalid="this.setCustomValidity('nama_kepala_ponpes Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
+                            <div class="form-group">
+                                <label for="link_grup_whatsapp">Tautan Group Whatsapp </label><br>
+                                <input class="form-control" id="link_grup_whatsapp" type="text" name="link_grup_whatsapp" placeholder="Masukkan link_grup_whatsapp" value="<?= $row['link_grup_whatsapp'] ?>">
+                            </div>
+
                             <!--<div class="form-group">
                                 <label for="fasilitas"> Fasilitas </label>
                                 <textarea id="tiny" name="fasilitas" value="<?= $row['fasilitas'] ?>" placeholder="Masukkan fasilitas"><?= $row['fasilitas'] ?></textarea>

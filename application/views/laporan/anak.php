@@ -99,7 +99,7 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Foto Anak</th>
+                  <!--<th>Foto Anak</th>-->
                   <th>NIK Anak</th>
                   <th>Nama</th>
                   <th>Jenis Kelamin</th>
@@ -108,6 +108,7 @@
                   <th>Nama Bapak</th>
                   <th>Agama</th>
                   <th>Kelas</th>
+                  <th> Tahun Masuk</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -116,10 +117,10 @@
                 foreach ($data as $row) { ?>
                   <tr>
                     <td><?php echo $no; ?></td>
-                    <td> <?php if ($row['foto_anak'] != null) { ?>
+                    <!--<td> <?php if ($row['foto_anak'] != null) { ?>
                         <img src="<?= base_url('upload/foto_anak/' . $row['foto_anak']) ?>" alt="" width="80px">
                       <?php } ?>
-                    </td>
+                    </td>-->
                     <td><?php echo $row['nik_anak']; ?></td>
                     <td><?php echo ucwords($row['nama_anak']); ?></td>
                     <td>
@@ -164,6 +165,7 @@
                         <span class="badge badge-success">Kuliah</span>
                       <?php } ?>
                     </td>
+                    <td><?php echo ucwords($row['tahun_masuk']); ?></td>
                     <td>
                       <?php if ($row['status'] == '1') { ?>
                         <a href="<?= site_url('anak/tidak_aktif/' . $row['nik_anak']) ?>" title="Klik untuk merubah"><span class="badge badge-primary">Aktif</span></a>

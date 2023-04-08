@@ -6,7 +6,7 @@
 
                   <div class="col-lg-4 col-md-6">
                       <div class="footer-info">
-                          <h3>SDN MEJASEM BARAT 01</h3>
+                          <h3 style="color:white;">SDN MEJASEM BARAT 01</h3>
                           <a href="#"><img src="<?php echo base_url() ?>assets/images/kw.jpg" alt="" height="100px" width="100px"></a>
                           <div class="social-links mt-3">
                               <?php
@@ -42,10 +42,11 @@
                       <p>
                           <?php
                             foreach ($footer as $data) { ?>
-                              <strong><i class='bx bx-phone'></i> : <?php echo ucwords($data['no_hp']); ?></strong><br>
-                              <strong><i class='bx bxl-gmail'></i> : <?php echo ucwords($data['email']); ?></strong><br>
-                              <strong><i class='bx bxl-whatsapp'></i> : <?php echo ucwords($data['whatsapp']); ?></strong> <br><br>
+                              <strong class="btn btn-white"><i class='bx bx-phone'></i> : <?php echo ucwords($data['no_hp']); ?></strong><br><br>
+                              <strong><a href="mailto:<?php echo ucwords($data['email']); ?>" class="btn btn-light text-dark"> <img src="https://th.bing.com/th/id/OIP.ZYBoGvR_bfdiAQLZZpVHQAHaFj?pid=ImgDet&w=187&h=140&c=7&dpr=1,4" width="20px" alt=""> : <?php echo ucwords($data['email']); ?></a></strong><br><br>
+                              <strong><a href="https://wa.me/<?php echo ucwords($data['whatsapp']); ?>" class="btn btn-success text-white"><i class="bi bi-whatsapp"></i> : Whatsapp Kami </a></strong> <br><br>
                           <?php } ?>
+
                       </p>
                   </div>
 

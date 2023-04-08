@@ -50,6 +50,7 @@ class Pengaturan extends CI_Controller
             'instagram' => $this->input->post('instagram'),
             'facebook' => $this->input->post('facebook'),
             'youtube' => $this->input->post('youtube'),
+            'link_grup_whatsapp' => $this->input->post('link_grup_whatsapp')
         );
         $this->M_pengaturan->update($id, $data);
         $this->session->set_flashdata('success', 'Data berhasil diubah');

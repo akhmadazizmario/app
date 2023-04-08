@@ -22,9 +22,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9">
-                        <h3><img class="img-fluid" width="70px" height="70px" src="<?= base_url() ?>assets/images/sdn.jfif" alt="">
+                        <strong><img class="img-fluid" width="70px" height="70px" src="<?= base_url() ?>assets/images/sdn.jfif" alt="">
                             SDN MEJASEM BARAT 01
-                        </h3> <br>
+                        </strong> <br><br>
                         <h6 class="text-dark"> <strong>Assalamualaikum wr.wb</strong></h6>
                         <p style="width: 90%; text-align: justify;">
                             Salam sejahtera selalu untuk kita semua. Selamat datang di SD Negeri Mejasem Barat 01. Dengan kemajuan zaman dan berkembangnya teknologi yang sangat pesat
@@ -61,54 +61,6 @@
                 </div>
             </div>
         <?php } ?>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <h2>EKSTRAKULIKULER</h2>
-                <hr> <br><br>
-                <div class="col-md-3 ">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra1.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Pencak Silat</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra2.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Seni Tari</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra3.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Futsall</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra4.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Drum Band</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra5.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Menggambar</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra6.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Pramuka</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra7.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Musik</strong></p>
-                    </center>
-                </div>
-                <div class="col-md-3 mt-4 mt-md-0">
-                    <center><img src="<?php echo base_url() ?>/assets/frontend2/img/ekstra8.png" height="150px" width="150px" alt="">
-                        <p><strong style="color:blue;">Tillawah</strong></p>
-                    </center>
-                </div>
-            </div>
-        </div>
     </section>
 
 </main>

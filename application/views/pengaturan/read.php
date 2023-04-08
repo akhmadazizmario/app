@@ -25,6 +25,10 @@
                                     <th>Kepala Sekolah</th>
                                     <!--<th>no.Telp Sekolah</th>-->
                                     <th>no. whats app</th>
+                                    <th>Tautan Group Whatsapp Calon Siswa terbaru</th>
+                                    <th>Facebook</th>
+                                    <th>Instagram</th>
+                                    <th>Youtube</th>
                                     <!--<th>Email Sekolah</th>-->
                                     <th>Pendaftaran dibuka </th>
                                     <th>Batas pendaftaran siswa</th>
@@ -45,6 +49,10 @@
                                         <td><?php echo ucwords($row['nama_kepala_ponpes']); ?></td>
                                         <!--<td><?php echo ucwords($row['no_hp']); ?></td>-->
                                         <td><?php echo ucwords($row['whatsapp']); ?></td>
+                                        <td><a href="<?php echo ucwords($row['link_grup_whatsapp']); ?>" class="btn btn-success">Group WA <i class="bi bi-whatsapp"></i></a></td>
+                                        <td><a href="<?php echo ucwords($row['facebook']); ?>" class="btn btn-primary">Facebook <i class="bi bi-facebook"></i></a></td>
+                                        <td><a href="<?php echo ucwords($row['instagram']); ?>" class="btn btn-danger">Instagram <i class="bi bi-instagram"></i></a></td>
+                                        <td><a href="<?php echo ucwords($row['youtube']); ?>" class="btn btn-danger">Youtube <i class="bi bi-youtube"></i></a></td>
                                         <!--<td><?php echo ucwords($row['email']); ?></td>-->
                                         <td><?php echo ucwords($row['pendaftaran_awal']); ?></td>
                                         <td><?php echo ucwords($row['batas_akhir']); ?></td>
@@ -54,7 +62,8 @@
                                         <td><?php echo ucwords($row['facebook']); ?></td>
                                         <td><?php echo ucwords($row['youtube']); ?></td>-->
                                         <td>
-                                            <a class="btn btn-sm btn-secondary rounded m-1" href="<?= base_url('pengaturan/edit/' . $row['id_pengaturan']) ?>"> <i class="fa fa-edit"></i> Edit </a>
+                                            <!--<a class="btn btn-sm btn-info rounded m-1" href="<?= base_url('pengaturan/detail/' . $row['id_pengaturan']) ?>"> <i class="fa fa-eye"></i> lihat </a>-->
+                                            <a class="btn btn-sm btn-primary rounded m-1" href="<?= base_url('pengaturan/edit/' . $row['id_pengaturan']) ?>"> <i class="fa fa-edit"></i> Edit </a>
                                         </td>
                                         </td>
                                     </tr>

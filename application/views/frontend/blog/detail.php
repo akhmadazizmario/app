@@ -25,7 +25,8 @@
                     <br><br>
                     <p><?= $row['isi'] ?> </p>
                     <br>
-                    <p>Dipublish pada : &nbsp; <?= $row['tanggal']; ?> </p>
+                    <p class="btn btn-secondary bg-light" style="color: black;">Dipublish pada : <i class="bi bi-calendar-date"></i>&nbsp; <?= $row['tanggal']; ?> </p><br>
+                    <a href="<?php echo base_url('utama/blog') ?>" class="btn btn-dark">Kembali <i class="bi bi-arrow-left-square"></i></a>
                 </div>
 
             </div>

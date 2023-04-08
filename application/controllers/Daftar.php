@@ -110,7 +110,7 @@
             );
             $this->M_daftar->save($data_anak);
             $this->M_daftar->savedetail($data_detail);
-            $this->session->set_flashdata('success', 'Berhasil mendaftar, cek whatsapp kamu untuk pemberitahuan lebih lanjut lagi');
+            $this->session->set_flashdata('success', 'Berhasil mendaftar, untuk informasi selanjutnya akan diberitahu melalui whatsapp group.');
             redirect('daftar/pesan', 'refresh');
         }
 
@@ -120,6 +120,7 @@
                 'judul' => 'Pendaftaran',
                 'user' => $this->M_daftar->GetAll(),
                 'footer' => $this->M_pengaturan->GetAll()->result_array(),
+                'data' => $this->M_pengaturan->GetAll()->result_array(),
             );
             $this->load->view('frontend/header', $data);
             $this->load->view('frontend/daftar/flash', $data);

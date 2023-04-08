@@ -22,7 +22,7 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Foto Anak</th>
+                  <!--<th>Foto Anak</th>-->
                   <th>NIK Anak</th>
                   <th>NISN</th>
                   <th>Nama</th>
@@ -37,6 +37,8 @@
                   <th>Pekerjaan Ibu</th>
                   <th>Pekerjaan Ayah</th>
                   <th>Agama</th> -->
+                  <th>Whatsapp</th>
+                  <th>No HP</th>
                   <th>Kelas</th>
                   <th>tahun masuk</th>
                   <th>Status</th>
@@ -48,16 +50,18 @@
                 foreach ($data as $row) { ?>
                   <tr>
                     <td><?php echo $no; ?></td>
-                    <td> <?php if ($row['foto_anak'] != null) { ?>
+                    <!--<td> <?php if ($row['foto_anak'] != null) { ?>
                         <img src="<?= base_url('upload/foto_anak/' . $row['foto_anak']) ?>" alt="" width="80px">
                       <?php } elseif ($row['foto_anak'] != null) { ?>
                         <img src="<?php echo base_url() ?>/assets/images/placeholder.png" width="80px">
                       <?php } ?>
 
-                    </td>
+                    </td>-->
                     <td><?php echo $row['nik_anak']; ?></td>
                     <td><?php echo $row['NISN']; ?></td>
                     <td><?php echo ucwords($row['nama_anak']); ?></td>
+                    <td><a href="https://wa.me/<?php echo $row['no_hp']; ?>" class="btn btn-success text-white">Whatsapp <i class="bi bi-whatsapp"></i></a></td>
+                    <td><?php echo $row['no_hp']; ?></td>
                     <!-- <td><?php echo $row['alamat']; ?></td>
                     <td><?php echo $row['no_hp']; ?></td>
                     <td>

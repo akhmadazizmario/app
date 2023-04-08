@@ -27,7 +27,7 @@
                           Sebagai media informasi dan komunikasi Web SDN Mejasem Barat 01
                           dibangun dan dikembangkan dalam rangka meningkatkan layanan sekolah kepada peserta didik, orang tua, dan masyarakat.</p>
                       <div class="text-center text-lg-start">
-                          <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Pendaftaran Peserta Didik</a>
+                          <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Daftar Peserta Didik Baru <i class="bi bi-receipt"></i></a>
                       </div>
                   </div>
               </div>
@@ -91,30 +91,30 @@
   <main id="main">
 
       <!-- ======= About Section ======= -->
-      <section id="about" class="about">
+      <section id="about" class="about bg-light">
           <div class="container-fluid">
+              <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded bg-white">
+                  <div class="row"><br><br>
+                      <?php
+                        foreach ($data as $data) { ?> <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+                              <img src="<?= base_url() ?>assets/images/upload/<?php echo ucwords($data['image']); ?>" alt="" height="450px" width="60%">
 
-              <div class="row">
-                  <?php
-                    foreach ($data as $data) { ?>
-                      <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-                          <img src="<?= base_url() ?>assets/images/upload/<?php echo ucwords($data['image']); ?>" alt="" height="300px" width="50%">
-                      </div>
+                          </div>
 
-                      <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-                          <h3>Sambutan Kepala Sekolah</h3>
-                          <p>Assalamu‘alaikum Warohmatullahi Wabarokkatuh. <br>
+                          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+                              <h3>Sambutan Kepala Sekolah</h3>
+                              <p>Assalamu‘alaikum Warohmatullahi Wabarokkatuh. <br>
 
-                              Selamat datang di situs web SDN Mejasem Barat 01, Kecamatan Kramat Kabupaten Tegal Jawa Tengah. Saya mengucapkan terima kasih kepada semua guru, staf, siswa, dan orang tua yang telah berkontribusi dalam memajukan sekolah kami. Sekolah ini telah berkembang pesat dan mencapai tujuan pendidikannya dengan baik. Kami bertekad untuk terus memberikan pelayanan terbaik bagi siswa dan orang tua. Semoga kunjungan Anda dan anggota keluarga di website ini dapat memberikan informasi yang membantu Anda untuk mengetahui lebih banyak tentang kami, termasuk program-program unggulan yang kami miliki. Terima kasih.
+                                  Selamat datang di situs web SDN Mejasem Barat 01, Kecamatan Kramat Kabupaten Tegal Jawa Tengah. Saya mengucapkan terima kasih kepada semua guru, staf, siswa, dan orang tua yang telah berkontribusi dalam memajukan sekolah kami. Sekolah ini telah berkembang pesat dan mencapai tujuan pendidikannya dengan baik. Kami bertekad untuk terus memberikan pelayanan terbaik bagi siswa dan orang tua. Semoga kunjungan Anda dan anggota keluarga di website ini dapat memberikan informasi yang membantu Anda untuk mengetahui lebih banyak tentang kami, termasuk program-program unggulan yang kami miliki. Terima kasih.
 
-                              Wassalamu'alaikum Warahmatullahi Wabarakatuh. <br><br> Salam Hangat, <br>
+                                  Wassalamu'alaikum Warahmatullahi Wabarakatuh. <br><br> Salam Hangat, <br>
 
-                          <h4><strong><?php echo ucwords($data['nama_kepala_ponpes']); ?></strong></h4>
+                              <h4><strong><?php echo ucwords($data['nama_kepala_ponpes']); ?></strong></h4>
 
-                          Kepala Sekolah, <br>
+                              Kepala Sekolah, <br>
 
-                          SDN Mejasem Barat 01, Kecamatan Kramat, Kabupaten Tegal, Jawa Tengah.</p>
-                          <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+                              SDN Mejasem Barat 01, Kecamatan Kramat, Kabupaten Tegal, Jawa Tengah.</p>
+                              <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
                               <defs>
                                   <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
                               </defs>
@@ -131,7 +131,8 @@
 
 
 
-                      </div>
+                          </div>
+                  </div>
               </div>
 
           </div>
@@ -139,13 +140,13 @@
       <!-- ======= Details Section ======= -->
       <section id="details" class="details">
           <div class="container">
-
               <div class="row content">
-                  <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+                  <div class="col-md-4 order-1 order-md-2" data-aos="fade-up">
                       <?php
-                        foreach ($brosur as $br) { ?>
-                          <img src="<?php echo base_url(); ?>assets/images/upload/<?= $br['image']; ?>" width="370px" height="500px" alt="...">
+                            foreach ($brosur as $br) { ?>
+                          <img src="<?php echo base_url(); ?>assets/images/upload/<?= $br['image']; ?>" width="100%" height="500px" alt="...">
                       <?php } ?>
+
                   </div>
                   <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
                       <h3>VISI DAN MISI</h3><br>
@@ -165,6 +166,7 @@
                   </div>
               </div>
 
+
           </div>
       </section><!-- End Details Section -->
 
@@ -177,16 +179,14 @@
 
                   <div class="col-lg-4 col-md-6 ">
                       <div class="box" data-aos="zoom-in" data-aos-delay="200" style="height: 350px;">
-                          <h3 style="color:white;background-color:black;">Informasi Pendaftaran</h3>
+                          <h3 style="color:white;background-color:black;">Informasi Pendaftaran</h3><br>
                           <p>Dibuka Pendaftaran Peserta Didik : <br>
                               <font color="blue"><?php echo ucwords($data['pendaftaran_awal']); ?> </font><br>
                               Batas Pendaftaran : <br>
                               <font color="red"> <?php echo ucwords($data['batas_akhir']); ?> </font><br>
                               Tahun ajar : <?php echo ucwords($data['periode']); ?>
                           </p>
-                          <div class="btn-wrap bg-white">
-                              <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-buy">Pendaftaran Peserta Didik</a>
-                          </div>
+
                       </div>
                   </div>
 

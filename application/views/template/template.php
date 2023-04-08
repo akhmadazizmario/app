@@ -10,7 +10,7 @@
   <meta name="author" content="HNF">
   <meta name="description" content="E-SEKOLAH">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manajemen <?= $this->fungsi->user_login()->nama ?> Sekolah</title>
+  <title>Manage <?= $this->fungsi->user_login()->nama ?> SDN MEJASEM BARAT 01</title>
 
   <!-- Favicons -->
   <link href="<?= base_url() ?>assets/images/logo.png" rel="icon">
@@ -29,6 +29,8 @@
 
   <!-- TinyMCE -->
   <script src="<?= base_url() ?>assets/vendors/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <!--ICON BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
@@ -61,12 +63,12 @@
         <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand p-2" href="<?= site_url('Dashboard') ?>"><img class="rounded" src="<?= base_url() ?>assets/images/emm.png" alt="" style="width: 70px;"> &nbsp; E-SEKOLAH</a>
+        <a class="navbar-brand p-2" href="<?= site_url('Dashboard') ?>"><img class="rounded" src="<?= base_url() ?>assets/images/sdn.jfif" alt="" style="width: 50px;"> &nbsp; E-SEKOLAH</a>
       </div>
 
       <div id="main-menu" class="main-menu collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <h3 class="menu-title">Fitur Utama</h3>
+          <h3 class="menu-title">Fitur utama</h3>
           <li class="">
             <a href="<?= base_url('dashboard') ?>"><i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
           </li>
@@ -187,9 +189,9 @@
             <ul class="sub-menu children dropdown-menu">
               <li><i class="fa ti-pencil-alt"></i><a href="<?= base_url('blog/tambah') ?>">Tambah Berita</a></li>
               <li><i class="fa fa-list-alt"></i><a href="<?= base_url('blog') ?>">Daftar Berita Sekolah</a></li>
-              <li><i class="fa fa-picture-o"></i><a href="<?= base_url('galeri/read') ?>">Gallery Sekolah</a></li>
             </ul>
           </li>
+          <li><a href="<?= base_url('galeri/read') ?>"><i class="fa fa-picture-o"></i> Manajemen Galery</a></li>
 
           <!-- Logout Akun -->
           <h3 class="menu-title">Logout</h3>
@@ -249,7 +251,7 @@
       <div class="col-sm-4">
         <div class="page-header float-left">
           <div class="page-title">
-            <h1><?= $judul; ?></h1>
+            <h1><?= $judul; ?> </h1>
           </div>
         </div>
       </div>

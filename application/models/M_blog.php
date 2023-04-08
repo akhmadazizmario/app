@@ -38,7 +38,7 @@ class M_blog extends CI_Model
     {
         unset($config);
         $config['upload_path']    = './assets/images/upload/';
-        $config['allowed_types']  = '.gif|jpg|png|jpeg';
+        $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif';
         $config['max_size']       = 2048;
         $config['file_name']      = 'Foto User' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
@@ -76,7 +76,7 @@ class M_blog extends CI_Model
     {
         unset($config);
         $config['upload_path']    = './assets/images/upload/';
-        $config['allowed_types']  = '.gif|jpg|png|jpeg';
+        $config['allowed_types']  = '.gif|jpg|png|jpeg|jfif';
         $config['max_size']       = 2048;
         $config['file_name']      = 'Foto User' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 

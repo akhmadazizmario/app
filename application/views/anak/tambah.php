@@ -7,39 +7,40 @@
       <div class="animated fadeIn">
         <div class="card">
           <div class="card-header">
-            <strong class="card-title"><i class="bi bi-exclamation-circle"></i>&nbsp;<a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-danger"> Klik Lihat Petunjuk Pendafatarn</a></strong>
+            <!--<strong class="card-title"><i class="bi bi-exclamation-circle"></i>&nbsp;<a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-danger"> Klik Lihat Petunjuk Pendafatarn</a></strong>-->
+            <strong style="color:red;">Mohon isi formulir dengan Data yang benar !</strong>
           </div>
 
           <!-- Petunjuk Modal -->
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Petunjuk Pendaftaran</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>
-                    Dimohon untuk mengisi formulir pendaftaran dengan data yang benar dan valid.
-                    <br><br>
-                    <strong>Notice : </strong><br>
-                    <i class="bi bi-check"></i> isi semua data yang ada tulisan <strong> (* wajib diisi ) </strong><br>
-                    <i class="bi bi-check"></i> Jika <strong> (* opsi/tidak wajib ) </strong> berarti tidak wajib diisi yah. <br>
-                    <i class="bi bi-check"></i> Jika ada kesalahan upload data, bisa hubungi kami secepatnya agar bisa diubah. <br>
-                    <i class="bi bi-check"></i> Klik Daftar. <br>
-                    <i class="bi bi-check"></i> Tunggu pemberitahuan lebih lanjut lewat whatsapp/no.hp yang terdaftar.
-                    <br><br>
-                    <strong>Catatan : </strong><br>
-                    Untuk berkas Akta & Kartu Keluarga Harap<strong> Difoto dengan jelas yah</strong>, Tidak boleh ada yang blur karena nanti bisa berpengaruh di tahap seleksi.
-                    <br>
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!--<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Petunjuk Pendaftaran</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            Dimohon untuk mengisi formulir pendaftaran dengan data yang benar dan valid.
+                                            <br><br>
+                                            <strong>Notice : </strong><br>
+                                            <i class="bi bi-check"></i> isi semua data yang ada tulisan <strong> (* wajib diisi ) </strong><br>
+                                            <i class="bi bi-check"></i> Jika <strong> (* opsi/tidak wajib ) </strong> berarti tidak wajib diisi yah. <br>
+                                            <i class="bi bi-check"></i> Jika ada kesalahan upload data, bisa hubungi kami secepatnya agar bisa diubah. <br>
+                                            <i class="bi bi-check"></i> Klik Daftar. <br>
+                                            <i class="bi bi-check"></i> Tunggu pemberitahuan lebih lanjut lewat whatsapp/no.hp yang terdaftar.
+                                            <br><br>
+                                            <strong>Catatan : </strong><br>
+                                            Untuk berkas Akta & Kartu Keluarga Harap<strong> Difoto dengan jelas yah</strong>, Tidak boleh ada yang blur karena nanti bisa berpengaruh di tahap seleksi.
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
 
           <div class="card-body">
             <?php if ($this->session->has_userdata('error')) : ?>
@@ -51,19 +52,19 @@
                 </button>
               </div>
             <?php endif; ?>
-            <form action="<?= base_url('anak/saveanak'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('anak/saveAnak'); ?>" method="post" enctype="multipart/form-data">
               <div class="row">
 
                 <!-- Bagian kiri -->
                 <div class="col-lg-6">
                   <div class="form-group mt-3">
-                    <label for="nik_anak"><strong> NIK Anak </strong> ( *wajib diisi )</label><br>
-                    <input class="form-control" id="nik_anak" type="text" name="nik_anak" placeholder="Masukkan Nomor Induk Kependudukan" required oninvalid="this.setCustomValidity('NIK Wajib Diisi')" oninput="this.setCustomValidity('')">
+                    <label for="nik_anak"><strong> NIK Anak </strong> ( * wajib diisi )</label><br>
+                    <input class="form-control" id="nik_anak" type="text" name="nik_anak" placeholder="Masukan Nik Calon Siswa" required oninvalid="this.setCustomValidity('NIK Wajib Diisi')" oninput="this.setCustomValidity('')">
                   </div>
                   <br>
                   <div class="form-group">
                     <label for="nama_anak"><strong> Nama Lengkap Anak </strong> ( *wajib diisi )</label><br>
-                    <input class="form-control" id="nama_anak" type="text" name="nama_anak" placeholder="Masukkan Nama" required oninvalid="this.setCustomValidity('Nama Wajib Diisi')" oninput="this.setCustomValidity('')">
+                    <input class="form-control" id="nama_anak" type="text" name="nama_anak" placeholder="Masukkan Nama Calon Siswa" required oninvalid="this.setCustomValidity('Nama Wajib Diisi')" oninput="this.setCustomValidity('')">
                   </div>
                   <br>
                   <div class="form-group">
@@ -72,8 +73,8 @@
                   </div>
                   <br>
                   <div class="form-group">
-                    <label for="no_hp"><strong> No HP / whatsapp</strong> ( *Wajib diisi )</label><br>
-                    <input class="form-control" id="no_hp" type="number" name="no_hp" placeholder="Masukkan Nomor Handphone yang bisa dihubungi" required oninvalid="this.setCustomValidity('No hp Wajib Diisi')" oninput="this.setCustomValidity('')">
+                    <label for="no_hp"><strong> No HP / whatsapp</strong> ( *Nomor Harus Aktif ! )</label><br>
+                    <input class="form-control" id="no_hp" type="number" name="no_hp" placeholder="contoh : 6289351789077" required oninvalid="this.setCustomValidity('No hp Wajib Diisi')" oninput="this.setCustomValidity('')">
                   </div>
                   <br>
                   <div class="form-group">
@@ -96,19 +97,19 @@
                   </div>
                   <br>
                   <div class="form-group">
-                    <label for="asal_paud"><strong> asal_paud Calon Siswa </strong>( *wajib diisi )</label><br>
-                    <input class="form-control" id="asal_paud" type="number" name="asal_paud" placeholder="Masukkan asal_paud kamu" required oninvalid="this.setCustomValidity('Asal Paud Wajib Diisi')" oninput="this.setCustomValidity('')">
+                    <label for="asal_paud"><strong> asal_paud Calon Siswa </strong></label><br>
+                    <input class="form-control" id="asal_paud" type="text" name="asal_paud" placeholder="contoh : TK Aisyiah">
                   </div>
                   <br>
                   <div class="form-group">
                     <label for="nama_ibu_kandung"><strong> Nama ibu </strong>( *wajib diisi )</label><br>
-                    <input class="form-control" id="nama_ibu_kandung" type="text" name="nama_ibu_kandung" placeholder="Masukkan Nama ibu kamu" required oninvalid="this.setCustomValidity('nama Ibu Wajib Diisi')" oninput="this.setCustomValidity('')">
+                    <input class="form-control" id="nama_ibu_kandung" type="text" name="nama_ibu_kandung" placeholder="masukan nama ibu" required oninvalid="this.setCustomValidity('nama Ibu Wajib Diisi')" oninput="this.setCustomValidity('')">
                   </div>
                   <br>
 
                   <div class="form-group">
                     <label for="nama_bapak_kandung"><strong> Nama Ayah </strong>( *wajib diisi )</label><br>
-                    <input class="form-control" id="nama_bapak_kandung" type="text" name="nama_bapak_kandung" placeholder="Masukkan Nama Ayah kamu" required oninvalid="this.setCustomValidity('Nama Ayah Wajib Diisi')" oninput="this.setCustomValidity('')">
+                    <input class="form-control" id="nama_bapak_kandung" type="text" name="nama_bapak_kandung" placeholder="masukan nama ayah" required oninvalid="this.setCustomValidity('Nama Ayah Wajib Diisi')" oninput="this.setCustomValidity('')">
                   </div>
                 </div>
 
@@ -116,20 +117,20 @@
                 <div class="col-lg-6">
                   <div class="form-group mt-3">
                     <Link for="pekerjaan_ibu"><strong>Pekerjaan Ibu</strong>( *wajib diisi )</label><br>
-                    <input class="form-control" id="pekerjaan_ibu" type="text" name="pekerjaan_ibu" placeholder="Masukkan pekerjaan ibu" required oninvalid="this.setCustomValidity('Pekerjaan ibu wajib diisi')" oninput="this.setCustomValidity('')">
+                    <input class="form-control" id="pekerjaan_ibu" type="text" name="pekerjaan_ibu" placeholder="contoh : Petani" required oninvalid="this.setCustomValidity('Pekerjaan ibu wajib diisi')" oninput="this.setCustomValidity('')">
                   </div>
 
                   <div class="form-group mt-3">
                     <label for="pekerjaan_ayah"><strong> Pekerjaan Ayah </strong>( *wajib diisi )</label><br>
-                    <input class="form-control" id="pekerjaan_ayah" type="text" name="pekerjaan_ayah" placeholder="Masukkan Pekerjaan ayah" required oninvalid="this.setCustomValidity('Pekerjaan ayah wajib diisi')" oninput="this.setCustomValidity('')">
+                    <input class="form-control" id="pekerjaan_ayah" type="text" name="pekerjaan_ayah" placeholder="contoh : Buruh Pabrik" required oninvalid="this.setCustomValidity('Pekerjaan ayah wajib diisi')" oninput="this.setCustomValidity('')">
                   </div>
 
-                  <div class="form-group mt-3">
-                    <label for="ktp"><strong> Foto KTP Ayah/Ibu </strong>( * Opsional )</label><br>
-                    <input id="ktp" type="file" name="ktp" class="form-control">
-                    <small class="help-block"> Maks. 2MB</small>
-                  </div>
-
+                  <!--<div class="form-group mt-3">
+                                            <label for="ktp"><strong> Foto KTP Ayah/Ibu </strong>( * Opsional / tidak wajib diisi )</label><br>
+                                            <input id="ktp" type="file" name="ktp" class="form-control">
+                                            <small class="help-block"> Maks. 2MB</small>
+                                        </div>
+                                        <br>-->
                   <div class="form-group">
                     <label for="agama"><strong> Agama </strong>(*wajib diisi )</label><br>
                     <select class="form-control" name="agama" required oninvalid="this.setCustomValidity('Pilih Agama disini')" oninput="setCustomValidity('')">
@@ -142,33 +143,33 @@
                       <option value="6">Konghucu</option>
                     </select>
                   </div>
-
+                  <br>
                   <div class="form-group">
                     <input class="form-control" id="pendidikan" type="hidden" name="pendidikan" value="1">
                   </div>
-                  <div class="form-group">
-                    <label for="scan_kk"><strong>Foto Kartu Keluarga</strong> ( *wajib diisi )</label>
-                    <input id="scan_kk" type="file" name="scan_kk" class="form-control" required>
-                    <small class="help-block"> Maks. 2MB</small>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="scan_akte"><strong>Foto Akta Kelahiran Calon Siswa</strong>( *wajib diisi )</label><br>
-                    <input id="scan_akte" type="file" name="scan_akte" class="form-control" required>
-                    <small class="help-block"> Maks. 2MB</small>
-                  </div>
-                  <br>
+                  <!--<div class="form-group">
+                                            <label for="scan_kk"><strong>Foto Kartu Keluarga</strong> ( *wajib diisi )</label><br>
+                                            <input id="scan_kk" type="file" name="scan_kk" class="form-control" required>
+                                            <small class="help-block"> Maks. 2MB</small>
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="scan_akte"><strong>Foto Akta Kelahiran Calon Siswa</strong>( *wajib diisi )</label><br>
+                                            <input id="scan_akte" type="file" name="scan_akte" class="form-control" required>
+                                            <small class="help-block"> Maks. 2MB</small>
+                                        </div>
+                                        <br>-->
                   <div class="form-group">
                     <input class="form-control" id="tahun_masuk" type="hidden" name="tahun_masuk" value="<?php echo date('Y') ?>">
                   </div>
 
-                  <div class="form-group">
-                    <label for="foto_anak"><strong>Foto Calon Siswa ( 3x4 ) </strong> ( * opsional )</label><br>
-                    <input id="foto_anak" type="file" name="foto_anak" class="form-control">
-                    <small class="help-block"> Maks. 2MB </small><br>
-                    <small class="help-block text-danger">Note! : Foto boleh bebas tetapi harus berpakaian sopan </small>
-                  </div>
-                  <br>
+                  <!--<div class="form-group">
+                                            <label for="foto_anak"><strong>Foto Calon Siswa ( 3x4 ) </strong> ( * opsional / tidak wajib diisi )</label><br>
+                                            <input id="foto_anak" type="file" name="foto_anak" class="form-control">
+                                            <small class="help-block"> Maks. 2MB </small><br>
+                                            <small class="help-block text-danger">Note! : Foto boleh bebas tetapi harus berpakaian sopan </small>
+                                        </div>
+                                        <br>--->
                   <div class="form-group">
                     <input class="form-control" id="jenis_masalah" type="hidden" name="jenis_masalah" value="8">
                   </div>

@@ -129,7 +129,7 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-user"></i><strong class="card-title pl-2">Profil Anak</strong>
+            <i class="fa fa-user"></i><strong class="card-title pl-2">Status Calon Siswa</strong>
           </div>
           <div class="card-body">
             <div class="mx-auto d-block">
@@ -172,7 +172,7 @@
             <small class="help-block"> Maks. 2MB</small>
           </div>
 
-          <div class="form-group">
+          <!--<div class="form-group">
             <label for="scan_ktp">Link Berkas KTP Orang Tua</label><br>
             <?php
             if ($row['ktp'] == '') {
@@ -186,12 +186,12 @@
             <p></p>
             <input id="ktp" type="file" name="ktp" class="form-control">
             <small class="help-block"> Maks. 2MB</small>
-          </div>
+          </div>-->
 
 
 
           <div class="form-group">
-            <label for="status"> Status </label><br>
+            <label for="status"> Status Siswa : </label><br>
             <select class="form-control" name="status" required oninvalid="this.setCustomValidity('Pilih Jenis Kelamin disini')" oninput="setCustomValidity('')">
               <option value="">:: Pilih Status ::</option>
               <option value="1" <?= $row['status'] == '1' ? 'selected' : null ?>>Aktif</option>
@@ -206,7 +206,7 @@
             <label for="foto_anak"> Upload Pas Foto ( 3x4 ) </label><br>
             <input id="foto_anak" type="file" name="foto_anak" class="form-control">
             <small class="help-block"> Maks. 2MB</small>
-          </div> -->
+        </div>-->
           <!-- 
           <div class="row form-group">
             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tahun Masuk</label></div>

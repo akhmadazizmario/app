@@ -19,11 +19,11 @@
                     <td><img src="<?= base_url('upload/foto_anak/' . $row['foto_anak']) ?>" alt="" width="80px"></td>
                   </tr>
                 <?php } ?>
-                <tr>
+                <!--<tr>
                   <th>ID anak</th>
                   <td> : </td>
                   <td> <?= $row['id_anak'] ?> </td>
-                </tr>
+                </tr>-->
                 <tr>
                   <th>Nama Anak</th>
                   <td> : </td>
@@ -40,7 +40,7 @@
                   <td> <?= $row['email'] ?> </td>
                 </tr> -->
                 <tr>
-                  <th>No Hp</th>
+                  <th>No Hp/Whatsapp</th>
                   <td> : </td>
                   <td> <?= $row['no_hp'] ?> </td>
                 </tr>
@@ -69,11 +69,11 @@
                   <td> : </td>
                   <td> <?= $row['alamat'] ?> </td>
                 </tr>
-                <tr>
+                <!--<tr>
                   <th>Nomor Handphe</th>
                   <td> : </td>
                   <td> <?= $row['no_hp'] ?> </td>
-                </tr>
+                </tr>-->
                 <tr>
                   <th>Nama Ibu</th>
                   <td> : </td>
@@ -154,7 +154,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <!--<tr>
                   <th width="150px">Berkas KTP Orang Tua</th>
                   <td> : </td>
                   <td>
@@ -169,7 +169,7 @@
                     <?php } ?>
                     <p></p>
                   </td>
-                </tr>
+                </tr>-->
 
                 <tr>
                   <th>Status</th>

@@ -71,6 +71,7 @@
                     <li><a href="<?php echo base_url('utama/blog') ?>" style="color:white;">Berita </a></li>
                     <li><a href="<?php echo base_url('utama/galeri') ?>" style="color:white;">Galeri</a></li>
                     <li><a href="<?php echo base_url('utama/tentangKami') ?>" style="color:white;">Tentang kami</a></li>
+                    <li><a href="<?php echo base_url('auth') ?>" style="color:white;">Login</a></li>
                     <?php
                     foreach ($footer as $data) { ?>
                         <li><a href="https://wa.me/<?php echo ucwords($data['whatsapp']); ?>" class="btn btn-success text-white">Whatsapp Kami <i class="bi bi-whatsapp"></i></a></li>

@@ -7,13 +7,14 @@ class M_daftar extends CI_Model
     private $pk    = 'nik_anak';
     private $table2 = 'detail_santri'; //this is table name
     private $pk2 = 'nik_anak';
+    private $id  = 'id_anak';
 
     public function GetAll()
     {
         $pendidikan =  $this->input->post('pendidikan');
         $tahun_masuk = $this->input->post('tahun_masuk');
 
-        $this->db->order_by($this->pk, 'desc');
+        $this->db->order_by($this->id, 'desc');
         if ($this->input->post('umur') == 1) {
             $this->db->where('umur BETWEEN "7" and "11"');
         }
