@@ -11,19 +11,18 @@ All notable changes to this project will be documented in this file.
 - Changed : Memasukan Email pada pendaftaran ( Opsional )
 - Changed : Label Upload foto diganti menjadi "Upload Pas Foto 3x4" pada Form Pendaftaran
 - Changed : Pada Halaman manajemen pengurus ( Mulai kerja di ganti dengan Mulai masuk)
-- Changed : Pada Halaman manajemen data santri, mengubah urutan field "Nama" ke setelah field "NIK"
+- Changed : Pada Halaman manajemen data siswa, mengubah urutan field "Nama" ke setelah field "NIK"
 - Changed : Improvisasi KOP Surat Hasil Cetak Laporan
 - Changed : Pada Halaman manajemen keuangan, mengubah urutan field "Pemasukan" ke sebelum "Pengeluaran"
 - Changed : Rebranding Title "Blog" ke "Berita Ponpes"
 - Changed : Improvisasi UI Design for Form Groups
 - Changed : Improvisasi Photo UI
 - Added   : Field Pekerjaan Orang Tua pada Form pendaftaran
-- Added   : Field Upload foto KTP orang tua pada Form pendaftaran
 - Added   : Field Alamat lengkap pada Form pendaftaran
 - Added   : Field Combo Box Kategori Masuk Ponpes ( Tafidz, Kitab ) dan Rumah Tafidz Qur’an
 - Added   : Pada Halaman manajemen Pengurus, Field No Telepon ditambahkan
 - Added   : Penambahan Laporan Anak dengan status aktif
-- Added   : Pada Halaman manajemen data santri, penambahan opsi status santri sebagai "Alumni"
+- Added   : Pada Halaman manajemen data siswa, penambahan opsi status siswa sebagai "Alumni"
 - Fixed   : Tambah Akun Pengguna
 - Fixed   : Tambah Data Pengurus
 - Fixed   : All Minor Bugs
@@ -55,14 +54,14 @@ All notable changes to this project will be documented in this file.
 
 > [ v3.0.0 ] Released - 29/07/2022 :
 - Changed : Improvisasi Halaman Landing Page
-- Changed : Improvisasi Halaman Pendaftaran Santri Baru
+- Changed : Improvisasi Halaman Pendaftaran siswa Baru
 - Fixed : Memperbaiki Link / URL pada Footer
 - Fixed : All Minor Bugs
 
 > [ v2.0.0 ] Released - 27/07/2022 :
 - Added : Halaman Utama ( Landing Page )
 - Added : Halaman Kontak dan Tentang Pondok Pesantren
-- Added : Halaman Pendaftaran Santri
+- Added : Halaman Pendaftaran siswa
 - Added : Menu Pengelolaan Artikel pada Dashboard Admin ( BETA )
 - Changed : WYSIWYG Editor merge to CKEditor 5 ( CDN Based )
 - Changed : Improvisasi Dashboard ( UI/UX )
@@ -80,4 +79,4 @@ All notable changes to this project will be documented in this file.
 - Changed : Re-desain Login UI
 - Changed : Improvisasi Login UX
 
-> Write by [Andika Tulus Pangestu](github.com/adnikatuluspangesti)
+> Write by [aziz mario](github.com/akhmadazizmario)
