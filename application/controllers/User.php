@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class User extends CI_Controller{
+class User extends CI_Controller
+{
 
   private $folder = "user/";
   private $foldertemplate = "template/";
@@ -13,7 +14,7 @@ class User extends CI_Controller{
     $this->load->model(array('M_user'));
     belum_login();
     cek_admin();
-    //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+    //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
   }
 
@@ -22,16 +23,16 @@ class User extends CI_Controller{
     $data = array(
       'data' => $this->M_user->GetAll()->result_array(),
       'judul' => 'Data User',
-     ); //u can use library array
-    $this->template->load($this->foldertemplate.'template',$this->folder.'read',$data);
+    ); //u can use library array
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'read', $data);
   }
 
   public function tambah()
   {
     $data = array(
-        'judul' => 'Tambah Data'
+      'judul' => 'Tambah Data'
     );
-    $this->template->load($this->foldertemplate.'template',$this->folder.'tambah',$data);
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'tambah', $data);
   }
 
   public function save()
@@ -45,12 +46,12 @@ class User extends CI_Controller{
       'role' => $this->input->post('role')
     );
     if ($this->M_user->cek_nama($this->input->post('nama'))->num_rows() > 0) {
-        $this->session->set_flashdata('error', "Nama <b>$data[nama]</b> sudah dipakai user lain, silahkan ganti dengan yang berbeda");
-        redirect('user/tambah','refresh');
-    }else {
-    $this->M_user->save($data);
-    $this->session->set_flashdata('success', 'Data berhasil disimpan');
-    redirect ('user','refresh');
+      $this->session->set_flashdata('error', "Nama <b>$data[nama]</b> sudah dipakai user lain, silahkan ganti dengan yang berbeda");
+      redirect('user/tambah', 'refresh');
+    } else {
+      $this->M_user->save($data);
+      $this->session->set_flashdata('success', 'Data berhasil disimpan');
+      redirect('user', 'refresh');
     }
   }
 
@@ -61,7 +62,7 @@ class User extends CI_Controller{
       'row' => $this->M_user->GetById($id), //menampilkan data user dari model berdasarkan id
       'judul' => 'Edit Data'
     );
-    $this->template->load($this->foldertemplate.'template',$this->folder.'edit',$data);
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'edit', $data);
   }
 
   public function update()
@@ -75,14 +76,14 @@ class User extends CI_Controller{
     );
     if ($this->input->post('password') != $this->input->post('konf_password')) {
       $this->session->set_flashdata('error', 'Password dan konfirmasi password tidak sama');
-      redirect ('user/edit/'.$id,'refresh');
+      redirect('user/edit/' . $id, 'refresh');
     }
     if ($this->input->post('password') != null) {
       $data['password'] = md5($this->input->post('password'));
     }
-    $this->M_user->update($id,$data);
+    $this->M_user->update($id, $data);
     $this->session->set_flashdata('success', 'Data berhasil diubah');
-    redirect ('user','refresh');
+    redirect('user', 'refresh');
   }
 
   public function delete($id)
@@ -90,7 +91,6 @@ class User extends CI_Controller{
     $id = $this->uri->segment(3);
     $this->M_user->delete($id);
     $this->session->set_flashdata('success', 'Data berhasil dihapus');
-    redirect ('user','refresh');
+    redirect('user', 'refresh');
   }
-
 }

@@ -42,6 +42,7 @@
                     <td><?= rupiah($row['saldo']) ?></td>
                     <td>
                       <a class="btn btn-sm btn-primary" href="<?= base_url('keuangan/detail/' . $row['id_saldo']) ?>"> <i class="fa fa-eye"></i> Detail </a>
+                      <a class="btn btn-sm btn-success" href="<?= base_url('keuangan/edit/' . $row['id_saldo']) ?>"> <i class="fa fa-edit"></i> Edit </a>
                       <a class="btn btn-sm btn-danger" href="<?= base_url('keuangan/delete/' . $row['id_saldo']) ?>" onclick="return confirm ('Apakah anda yakin ingin menghapus data ini?')"> <i class="fa fa-trash-o"></i> Delete </a>
                     </td>
                     </td>

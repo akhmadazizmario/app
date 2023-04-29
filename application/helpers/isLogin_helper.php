@@ -88,7 +88,7 @@
 		$filetmp 	= $file['tmp_name'];
 
 		$fileupload = $dst.$filename;
-		//upload ukuran sebenarnya
+		//Upload ukuran sebenarnya
 		move_uploaded_file($filetmp, $fileupload);
 
 		//Identifikasi Gambar
@@ -127,5 +127,3 @@
 
 		return $filename;
 	}
-
-?>

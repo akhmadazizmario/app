@@ -34,6 +34,11 @@
                   <td> : </td>
                   <td> <?= $row['nik_anak'] ?> </td>
                 </tr>
+                <tr>
+                  <th>NISN</th>
+                  <td> : </td>
+                  <td> <?= $row['NISN'] ?> </td>
+                </tr>
                 <!-- <tr>
                   <th>Email</th>
                   <td> : </td>
@@ -120,7 +125,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <!--<tr>
                   <th width="150px">Berkas Kartu keluarga</th>
                   <td> : </td>
                   <td>
@@ -154,7 +159,7 @@
                   </td>
                 </tr>
 
-                <!--<tr>
+                <tr>
                   <th width="150px">Berkas KTP Orang Tua</th>
                   <td> : </td>
                   <td>

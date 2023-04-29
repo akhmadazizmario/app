@@ -13,7 +13,7 @@ class Lap_anak extends CI_Controller
 
     $this->load->model(array('M_user', 'M_pengurus', 'M_anak', 'M_jenis_masalah', 'M_keadaan_saat_ini', 'M_akta', 'M_alasan_masuk_panti', 'M_jenis_bantuan'));
     belum_login();
-    //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+    //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
   }
 

@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Jenis_masalah extends CI_Controller{
+class Jenis_masalah extends CI_Controller
+{
 
   private $folder = "jenis_masalah/";
   private $foldertemplate = "template/";
@@ -10,9 +11,9 @@ class Jenis_masalah extends CI_Controller{
   {
     parent::__construct();
 
-    $this->load->model(array('M_user','M_jenis_masalah'));
+    $this->load->model(array('M_user', 'M_jenis_masalah'));
     belum_login();
-    //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+    //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
   }
 
@@ -21,16 +22,16 @@ class Jenis_masalah extends CI_Controller{
     $data = array(
       'data' => $this->M_jenis_masalah->GetAll()->result_array(),
       'judul' => 'Data Jenis Masalah',
-     ); //u can use library array
-    $this->template->load($this->foldertemplate.'template',$this->folder.'read',$data);
+    ); //u can use library array
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'read', $data);
   }
 
   public function tambah()
   {
     $data = array(
-        'judul' => 'Tambah Data',
+      'judul' => 'Tambah Data',
     );
-    $this->template->load($this->foldertemplate.'template',$this->folder.'tambah',$data);
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'tambah', $data);
   }
 
   public function save()
@@ -38,14 +39,14 @@ class Jenis_masalah extends CI_Controller{
     $data = array( //fungsi array disini adalah untuk mengumpulkan data
       'id_jenis_masalah' => $this->input->post('id_jenis_masalah'),
       'jenis_masalah' => $this->input->post('jenis_masalah'),
-      );
+    );
     if ($this->M_jenis_masalah->cek_jenis_masalah($this->input->post('jenis_masalah'))->num_rows() > 0) {
-        $this->session->set_flashdata('error', "Nama <b>$data[jenis_masalah]</b> sudah ada, silahkan ganti dengan yang berbeda");
-        redirect('jenis_masalah/tambah','refresh');
-    }else {
+      $this->session->set_flashdata('error', "Nama <b>$data[jenis_masalah]</b> sudah ada, silahkan ganti dengan yang berbeda");
+      redirect('jenis_masalah/tambah', 'refresh');
+    } else {
       $this->M_jenis_masalah->save($data);
       $this->session->set_flashdata('success', 'Data berhasil disimpan');
-      redirect ('jenis_masalah','refresh');
+      redirect('jenis_masalah', 'refresh');
     }
   }
 
@@ -57,7 +58,7 @@ class Jenis_masalah extends CI_Controller{
       'judul' => 'Edit Data',
       'jenis_masalah' => $this->M_jenis_masalah->GetAll(),
     );
-    $this->template->load($this->foldertemplate.'template',$this->folder.'edit',$data);
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'edit', $data);
   }
 
   public function update()
@@ -66,9 +67,9 @@ class Jenis_masalah extends CI_Controller{
     $data = array(
       'jenis_masalah' => $this->input->post('jenis_masalah'),
     );
-    $this->M_jenis_masalah->update($id,$data);
+    $this->M_jenis_masalah->update($id, $data);
     $this->session->set_flashdata('success', 'Data berhasil diubah');
-    redirect ('jenis_masalah','refresh');
+    redirect('jenis_masalah', 'refresh');
   }
 
   public function delete($id)
@@ -76,7 +77,6 @@ class Jenis_masalah extends CI_Controller{
     $id = $this->uri->segment(3);
     $this->M_jenis_masalah->delete($id);
     $this->session->set_flashdata('success', 'Data berhasil dihapus');
-    redirect ('jenis_masalah','refresh');
+    redirect('jenis_masalah', 'refresh');
   }
-
 }

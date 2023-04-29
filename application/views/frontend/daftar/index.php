@@ -15,6 +15,7 @@
     <section>
         <div class="container">
             <div class="content">
+                <a class="btn btn-warning mb-5" href="<?= base_url() ?>assets/tutorial_pendaftaran.pdf">Tutorial Pendaftaran <i class="bi bi-blockquote-right"></i></a>
                 <div class="animated fadeIn">
                     <div class="card">
                         <div class="card-header">
@@ -142,7 +143,7 @@
                                             <small class="help-block"> Maks. 2MB</small>
                                         </div>
                                         <br>-->
-                                        <div class="form-group">
+                                        <div class="form-group mt-3">
                                             <label for="agama"><strong> Agama </strong>(*wajib diisi )</label><br>
                                             <select class="form-control" name="agama" required oninvalid="this.setCustomValidity('Pilih Agama disini')" oninput="setCustomValidity('')">
                                                 <option value="">:: Pilih Agama ::</option>

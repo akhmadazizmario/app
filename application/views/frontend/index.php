@@ -1,4 +1,4 @@
-  <!-- ======= Hero Section ======= -->
+  <!-- ======= Hero SectionN ======= -->
   <section id="hero" style="background-color: rgb(2, 5, 161);">
 
       <div class="container">

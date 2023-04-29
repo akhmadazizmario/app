@@ -15,7 +15,7 @@ class Lap_keuangan extends CI_Controller
 
     belum_login();
     cek_keuangan();
-    //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+    //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
   }
 

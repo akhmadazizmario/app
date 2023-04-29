@@ -8,7 +8,7 @@ class Utama extends CI_Controller
     {
         parent::__construct();
         $this->load->model(array('M_user', 'M_blog', 'M_galeri', 'M_pengaturan', 'M_brosur'));
-        //Codeigniter : Write Less Do More
+        //Codeigniter : Write Less Do MoreE
     }
 
     function index()

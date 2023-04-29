@@ -5,7 +5,7 @@ class M_anak extends CI_Model
 {
 
   private $table = 'data_siswa';
-  private $table2 = 'detail_santri'; //this is table name
+  private $table2 = 'detail_santri'; //This is table name
   private $pk = 'nik_anak'; //this is primary key
   private $pk2 = 'nik_anak';
   private $id  = 'id_anak';

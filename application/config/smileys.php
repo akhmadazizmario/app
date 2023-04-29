@@ -1,11 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
 | SMILEYS
 | -------------------------------------------------------------------
-| This file contains an array of smileys for use with the emoticon helper.
+| This File contains an array of smileys for use with the emoticon helper.
 | Individual images can be used to replace multiple smileys.  For example:
 | :-) and :) use the same image replacement.
 |
@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $smileys = array(
 
-//	smiley			image name						width	height	alt
+	//	smiley			image name						width	height	alt
 
 	':-)'			=>	array('grin.gif',			'19',	'19',	'grin'),
 	':lol:'			=>	array('lol.gif',			'19',	'19',	'LOL'),

@@ -1,11 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
 | Memcached settings
 | -------------------------------------------------------------------------
-| Your Memcached servers can be specified below.
+| Your Memcached servers can be specified Below.
 |
 |	See: https://codeigniter.com/user_guide/libraries/caching.html#memcached
 |

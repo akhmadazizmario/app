@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller{
+class Dashboard extends CI_Controller
+{
 
   private $folder = "dashboard/";
   private $foldertemplate = "template/";
@@ -10,8 +11,8 @@ class Dashboard extends CI_Controller{
   {
     parent::__construct();
     belum_login();
-    $this->load->model(array('M_pengurus','M_anak','M_donatur','M_keuangan','M_surat_masuk','M_surat_keluar','M_inventaris','M_buku_tamu','M_user'));
-    //Codeigniter : Write Less Do More
+    $this->load->model(array('M_pengurus', 'M_anak', 'M_donatur', 'M_keuangan', 'M_surat_masuk', 'M_surat_keluar', 'M_inventaris', 'M_buku_tamu', 'M_user'));
+    //Codeigniter : Write Less Do Moree
   }
 
   function index()
@@ -29,7 +30,7 @@ class Dashboard extends CI_Controller{
       'inventaris' => $this->M_inventaris->GetAll(),
       'buku_tamu' => $this->M_buku_tamu->GetAll(),
       'user' => $this->M_user->GetAll(),
-      'get_surat_masuk'=> json_encode($getSuratMasuk),
+      'get_surat_masuk' => json_encode($getSuratMasuk),
       // statistik surat_masuk
       'januari'  => $this->M_statistik->januari(),
       'februari'  => $this->M_statistik->februari(),
@@ -93,9 +94,8 @@ class Dashboard extends CI_Controller{
       // Pengeluaran perbulan ini
       'pperbulan' => $this->M_statistik->get_pengeluaranperbulan()->result_array(),
       'pperbulan_lalu' => $this->M_statistik->get_pengeluaranperbulanlalu()->result_array(),
-     );
+    );
     //  var_dump($getSuratMasuk); die();
-    $this->template->load($this->foldertemplate.'template',$this->folder.'dashboard',$data);
+    $this->template->load($this->foldertemplate . 'template', $this->folder . 'dashboard', $data);
   }
-
 }

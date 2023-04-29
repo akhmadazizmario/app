@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_keuangan extends CI_Model
 {
 
-  private $table = 'keuangan'; //this is table name
+  private $table = 'keuangan'; //This is table name
   private $pk = 'id_saldo'; //this is primary key
 
   public function __construct()

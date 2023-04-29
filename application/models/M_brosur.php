@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_brosur extends CI_Model
 {
-    private $table = 'brosur'; //this is table name
+    private $table = 'brosur'; //This is table name
     private $pk = 'id_brosur'; //this is primary key
 
     public function __construct()

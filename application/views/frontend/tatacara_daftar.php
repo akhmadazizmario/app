@@ -1,6 +1,6 @@
 <main id="main">
 
-    <!-- Bagian Breadcrumbs -->
+    <!-- Bagian BreadcrumbsS -->
     <div class="breadcrumbs">
         <div class="container">
 

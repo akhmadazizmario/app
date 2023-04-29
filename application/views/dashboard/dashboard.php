@@ -13,7 +13,7 @@
   </div>
 <?php endif; ?>
 
-
+<!-- .animated -->
 <?php if ($this->fungsi->user_login()->role != 2) : ?>
   <div class="row">
     <div class="col-md-12">

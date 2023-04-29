@@ -63,4 +63,4 @@
         <?php } ?>
     </section>
 
-</main>
+</main><!-- .animated -->

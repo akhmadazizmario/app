@@ -13,7 +13,7 @@
             <div class="alert alert-info" role="alert"><i class="bx bx-info-circle"></i><strong> Selamat, Pendaftaran Anda sudah
                     Berhasil <i class="bi bi-emoji-smile"></i></strong>
             </div><br><br>
-            <h5> Silahkan Setelah Mendaftar, Calon Siswa <strong style="color: red;">WAJIB!</strong> Klik / Gabung Tautan/Link Group Whatsapp Calon Siswa Baru Dibawah Agar Tidak Ketinggalan Informasi:</h5>
+            <h5>Setelah Mendaftar, Calon Siswa <strong style="color: red;">DIWAJIBKAN!</strong> Klik / Gabung Tautan/Link Group Whatsapp Calon Siswa Baru Dibawah Agar Tidak Ketinggalan Informasi:</h5>
             <br><br>
             <?php
             foreach ($data as $data) { ?>

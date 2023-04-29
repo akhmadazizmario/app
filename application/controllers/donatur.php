@@ -88,7 +88,7 @@ class Donatur extends CI_Controller
   {
     $id = $this->uri->segment(3); //uri segment 1 = contorller, 2 = fungsi controller, 3 = id
     $data = array(
-      'row' => $this->M_donatur->GetById($id), //menampilkan data anak dari model berdasarkan id
+      'row' => $this->M_donatur->GetById($id), //Menampilkan data anak dari model berdasarkan id
       'judul' => 'detail data',
       'donatur' => $this->M_donatur->GetAll(),
     );

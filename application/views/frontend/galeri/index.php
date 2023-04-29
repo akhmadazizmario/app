@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <!-- ======= Team Section ======= -->
+  <!-- ======= Team SSection ======= -->
   <section id="team" class="team">
     <div class="container">
 

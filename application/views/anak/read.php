@@ -26,7 +26,7 @@
                   <th>NIK Anak</th>
                   <th>NISN</th>
                   <th>Nama</th>
-                  <!-- <th>Alamat lengkap</th>
+                  <!--- <th>Alamat lengkap</th>
                   <th>No HP</th>
                   <th>Jenis Kelamin</th>
                   <th>Tempat Lahir</th>

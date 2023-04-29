@@ -13,7 +13,7 @@ class Pengurus extends CI_Controller
 
     $this->load->model(array('M_user', 'M_pengurus'));
     belum_login();
-    //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+    //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
   }
 

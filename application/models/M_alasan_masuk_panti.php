@@ -1,10 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_alasan_masuk_panti extends CI_Model{
+class M_alasan_masuk_panti extends CI_Model
+{
 
-  private $table ='alasan_masuk_panti'; //this is table name
-  private $pk ='id_alasan'; //this is primary key
+  private $table = 'alasan_masuk_panti'; //This is table name
+  private $pk = 'id_alasan'; //this is primary key
 
 
   public function __construct()
@@ -13,16 +14,16 @@ class M_alasan_masuk_panti extends CI_Model{
     //Codeigniter : Write Less Do More
   }
 
- public function GetAll($id = null)
+  public function GetAll($id = null)
   {
-    $this->db->order_by($this->pk,'desc');
+    $this->db->order_by($this->pk, 'desc');
     if ($id != null) {
       $this->db->where('id_alasan', $id);
     }
     return $this->db->get($this->table); //u can use library cidbget
   }
-  
-    public function GetById($id)
+
+  public function GetById($id)
   {
     $this->db->where($this->pk, $id); //u can use cidbwhere
     return $this->db->get($this->table)->row_array();
@@ -37,24 +38,23 @@ class M_alasan_masuk_panti extends CI_Model{
   {
     $this->db->from('alasan_masuk_panti');
     $this->db->where('alasan', $code);
-    if($id != null){
+    if ($id != null) {
       $this->db->where('id_alasan !=', $id);
     }
     $query = $this->db->get();
     return $query;
   }
 
-  public function update($id,$data)
+  public function update($id, $data)
   {
-    $this->db->where($this->pk,$id);
+    $this->db->where($this->pk, $id);
     return $this->db->update($this->table, $data);
   }
 
   public function delete($id)
   {
-    $data=$this->M_alasan_masuk_panti->GetAll($id)->row();
+    $data = $this->M_alasan_masuk_panti->GetAll($id)->row();
     $this->db->where($this->pk, $id);
     $this->db->delete($this->table);
   }
-
 }

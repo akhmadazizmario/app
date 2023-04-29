@@ -12,7 +12,7 @@ class M_galeri extends CI_Model
         if ($id != null) {
             $this->db->where('id_galeri', $id);
         }
-        return $this->db->get($this->table); //u can use library cidbget
+        return $this->db->get($this->table); //U can use library cidbget
     }
     public function delete($id)
     {

@@ -13,7 +13,7 @@ class Alasan_masuk_panti extends CI_Controller
 
     $this->load->model(array('M_user', 'M_alasan_masuk_panti'));
     belum_login();
-    //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+    //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
     //Codeigniter : Write Less Do More
   }
 

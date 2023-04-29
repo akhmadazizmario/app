@@ -12,7 +12,7 @@ class Blog extends CI_Controller
         //Codeigniter : Write Less Do More
         $this->load->model(array('M_user', 'M_blog'));
         belum_login();
-        //array berhubungan dengan database, array di sini untuk meload lebih dari satu model
+        //Array berhubungan dengan database, array di sini untuk meload lebih dari satu model
         //Codeigniter : Write Less Do More
     }
 
@@ -76,5 +76,4 @@ class Blog extends CI_Controller
         $this->session->set_flashdata('success', 'Data berhasil diubah');
         redirect('blog', 'refresh');
     }
-    
 }

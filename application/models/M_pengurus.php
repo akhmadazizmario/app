@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_pengurus extends CI_Model
 {
 
-  private $table = 'data_pengurus'; //this is table name
+  private $table = 'data_pengurus'; //This is table name
   private $pk = 'id_pengurus'; //this is primary key
 
 

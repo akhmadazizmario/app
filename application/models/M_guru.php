@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_guru extends CI_Model
 {
 
-    private $table = 'data_guru'; //this is table name
+    private $table = 'data_guru'; //This is table name
     private $pk = 'id_guru'; //this is primary key
 
 

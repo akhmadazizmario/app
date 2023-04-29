@@ -36,7 +36,7 @@
 
                             <label for="upload"> Gambar Thumbnail :</label><br>
                             <div class="form-group custom-file mb-3">
-                                <input id="upload" type="file" name="image"  class="custom-file-input" id="customFile">
+                                <input id="upload" type="file" name="image" class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file - Maks. 2MB</label>
                             </div>
 
@@ -47,6 +47,5 @@
                 </div>
             </div>
         </div>
-    </div><!-- .animated -->
-</div><!-- .content -->
-
+    </div><!-- Animated -->
+</div><!-- content -->

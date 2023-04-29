@@ -19,7 +19,7 @@ class Auth extends CI_Controller {
 		$nama = htmlspecialchars($this->input->post('nama',TRUE), ENT_QUOTES);
 		$password = htmlspecialchars(md5($this->input->post('password',TRUE)), ENT_QUOTES);
 		$user = $this->db->get_where('user', ['nama' => $nama])->row_array();
-		// Jika Usernya ada
+		// Jika Usernya Ada
 		if ($user) {
 			// cek password
 			if ($user['password'] == $password) {
@@ -106,5 +106,3 @@ class Auth extends CI_Controller {
 		redirect('Auth','refresh');
 	}
 }
-
-?>

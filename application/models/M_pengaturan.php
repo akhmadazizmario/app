@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_pengaturan extends CI_Model
 {
-    private $table = 'pengaturan'; //this is table name
+    private $table = 'pengaturan'; //This is table name
     private $pk = 'id_pengaturan'; //this is primary key
 
     public function __construct()

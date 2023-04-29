@@ -27,10 +27,10 @@
                 <input class="form-control" id="nik_anak" type="text" name="nik_anak" value="<?= $row['nik_anak'] ?>" oninvalid="this.setCustomValidity('NIK Wajib Diisi')" oninput="this.setCustomValidity('')">
               </div>
 
-              <!-- <div class="form-group">
-                <label for="email"> Email ( Opsional )</label><br>
-                <input class="form-control" id="email" type="text" name="email" value="<?= $row['email'] ?>">
-              </div> -->
+              <div class="form-group">
+                <label for="NISN"> NISN</label><br>
+                <input class="form-control" id="NISN" type="text" name="NISN" value="<?= $row['NISN'] ?>">
+              </div>
 
               <div class="form-group">
                 <label for="no_hp"> No HP</label><br>
@@ -131,7 +131,7 @@
           <div class="card-header">
             <i class="fa fa-user"></i><strong class="card-title pl-2">Status Calon Siswa</strong>
           </div>
-          <div class="card-body">
+          <!--<div class="card-body">
             <div class="mx-auto d-block">
               <img class="rounded-circle mx-auto d-block" src="<?= base_url('upload/foto_anak/' . $row['foto_anak']) ?>" alt="Card image cap" style="width:100px;height:100px;">
             </div>
@@ -172,7 +172,7 @@
             <small class="help-block"> Maks. 2MB</small>
           </div>
 
-          <!--<div class="form-group">
+          <div class="form-group">
             <label for="scan_ktp">Link Berkas KTP Orang Tua</label><br>
             <?php
             if ($row['ktp'] == '') {
@@ -190,7 +190,7 @@
 
 
 
-          <div class="form-group">
+          <div class="form-group mx-3 mb-4 mt-4">
             <label for="status"> Status Siswa : </label><br>
             <select class="form-control" name="status" required oninvalid="this.setCustomValidity('Pilih Jenis Kelamin disini')" oninput="setCustomValidity('')">
               <option value="">:: Pilih Status ::</option>
@@ -201,6 +201,7 @@
               <option value="5" <?= $row['status'] == '5' ? 'selected' : null ?>>Tidak Diterima</option>
             </select>
           </div>
+
 
           <!-- <div class="form-group">
             <label for="foto_anak"> Upload Pas Foto ( 3x4 ) </label><br>
@@ -301,7 +302,7 @@
 
 
 
-          <div class="text-center">
+          <div class="text-center mb-5">
             <button class="btn btn-sm btn-primary" type="submit"> <i class="fa fa-save"></i> Save </button>
             <button class="btn btn-sm btn-secondary" type="reset"> <i class="fa fa-rotate-right"></i> Reset </button>
           </div>

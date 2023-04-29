@@ -100,4 +100,4 @@
             </div>
         </div>
     </section>
-</main>
+</main><!-- .animated -->

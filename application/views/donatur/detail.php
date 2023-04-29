@@ -73,5 +73,5 @@
         </div>
       </div>
     </div>
-  </div><!-- .animated -->
+  </div><!-- .Animated -->
 </div><!-- .content -->

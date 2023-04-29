@@ -1,6 +1,8 @@
 <?php
 class Template {
 
+  //TEMPLATE
+
     var $template_data =  array();
 
     function set ($name,$value)
@@ -15,5 +17,3 @@ class Template {
       return $this->CI->load->view($template,$this->template_data, $return);
     }
 }
-
- ?>

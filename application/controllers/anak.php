@@ -109,7 +109,7 @@ class Anak extends CI_Controller
 
   public function detail()
   {
-    $id = $this->uri->segment(3); //uri segment 1 = contorller, 2 = fungsi controller, 3 = id
+    $id = $this->uri->segment(3); /*Uri segment 1 = contorller, 2 = fungsi controller, 3 = id*/
     $data = array(
       'row' => $this->M_anak->GetById($id), //menampilkan data anak dari model berdasarkan id
       'detail' => $this->M_anak->GetById_detail_anak($id),
@@ -143,7 +143,7 @@ class Anak extends CI_Controller
       'pendidikan' => $this->input->post('pendidikan'),
       'id_kelas' => $this->input->post('id_kelas'),
       'tahun_masuk' => $this->input->post('tahun_masuk'),
-      // 'email' => $this->input->post('email'),
+      'NISN' => $this->input->post('NISN'),
       'no_hp' => $this->input->post('no_hp'),
       'status' => $this->input->post('status'),
     );

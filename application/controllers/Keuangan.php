@@ -36,7 +36,7 @@ class Keuangan extends CI_Controller
       'donatur' => $this->M_keuangan->GetAll(),
       'saldo_akhir' => $this->M_keuangan->jumlah()
     );
-    $this->template->load($this->foldertemplate . 'template', $this->folder . 'tambah', $data);
+    $this->load->view('keuangan/tambah', $data);
   }
 
   public function save()
@@ -145,56 +145,56 @@ class Keuangan extends CI_Controller
     redirect('keuangan', 'refresh');
   }
 
-  public function export()
-  {
-    $data['data_keuangan'] = $this->M_keuangan->GetAll()->result();
+  // public function export()
+  // {
+  //   $data['data_keuangan'] = $this->M_keuangan->GetAll()->result();
 
-    require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel.php');
-    require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php');
+  //   require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel.php');
+  //   require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php');
 
-    $objPHPExcel = new PHPExcel();
+  //   $objPHPExcel = new PHPExcel();
 
-    $objPHPExcel->getProperties()->setCreator("Veni");
-    $objPHPExcel->getProperties()->setLastModifiedBy("Veni");
-    $objPHPExcel->getProperties()->setTitle("Data Keuangan");
-    $objPHPExcel->getProperties()->setSubject("");
-    $objPHPExcel->getProperties()->setDescription("");
+  //   $objPHPExcel->getProperties()->setCreator("Veni");
+  //   $objPHPExcel->getProperties()->setLastModifiedBy("Veni");
+  //   $objPHPExcel->getProperties()->setTitle("Data Keuangan");
+  //   $objPHPExcel->getProperties()->setSubject("");
+  //   $objPHPExcel->getProperties()->setDescription("");
 
-    $objPHPExcel->setActiveSheetIndex(0);
+  //   $objPHPExcel->setActiveSheetIndex(0);
 
-    $objPHPExcel->getActiveSheet()->setCellValue('A1', "No");
-    $objPHPExcel->getActiveSheet()->setCellValue('B1', "Tanggal");
-    $objPHPExcel->getActiveSheet()->setCellValue('C1', "Keterangan");
-    $objPHPExcel->getActiveSheet()->setCellValue('D1', "Pengeluaran");
-    $objPHPExcel->getActiveSheet()->setCellValue('E1', "Pemasukan");
-    $objPHPExcel->getActiveSheet()->setCellValue('F1', "Saldo");
+  //   $objPHPExcel->getActiveSheet()->setCellValue('A1', "No");
+  //   $objPHPExcel->getActiveSheet()->setCellValue('B1', "Tanggal");
+  //   $objPHPExcel->getActiveSheet()->setCellValue('C1', "Keterangan");
+  //   $objPHPExcel->getActiveSheet()->setCellValue('D1', "Pengeluaran");
+  //   $objPHPExcel->getActiveSheet()->setCellValue('E1', "Pemasukan");
+  //   $objPHPExcel->getActiveSheet()->setCellValue('F1', "Saldo");
 
-    $baris = 2;
-    $x = 1;
+  //   $baris = 2;
+  //   $x = 1;
 
-    foreach ($data['data_keuangan'] as $data) {
-      $objPHPExcel->getActiveSheet()->setCellValue('A' . $baris, $x);
-      $objPHPExcel->getActiveSheet()->setCellValue('B' . $baris, $data->tgl_keuangan);
-      $objPHPExcel->getActiveSheet()->setCellValue('C' . $baris, $data->keterangan);
-      $objPHPExcel->getActiveSheet()->setCellValue('D' . $baris, $data->pengeluaran);
-      $objPHPExcel->getActiveSheet()->setCellValue('E' . $baris, $data->pemasukan);
-      $objPHPExcel->getActiveSheet()->setCellValue('F' . $baris, $data->saldo);
+  //   foreach ($data['data_keuangan'] as $data) {
+  //     $objPHPExcel->getActiveSheet()->setCellValue('A' . $baris, $x);
+  //     $objPHPExcel->getActiveSheet()->setCellValue('B' . $baris, $data->tgl_keuangan);
+  //     $objPHPExcel->getActiveSheet()->setCellValue('C' . $baris, $data->keterangan);
+  //     $objPHPExcel->getActiveSheet()->setCellValue('D' . $baris, $data->pengeluaran);
+  //     $objPHPExcel->getActiveSheet()->setCellValue('E' . $baris, $data->pemasukan);
+  //     $objPHPExcel->getActiveSheet()->setCellValue('F' . $baris, $data->saldo);
 
-      $x++;
-      $baris++;
-    }
+  //     $x++;
+  //     $baris++;
+  //   }
 
-    $filename = "Data Keuangan" . date('d-m-Y') . '.xlsx';
+  //   $filename = "Data Keuangan" . date('d-m-Y') . '.xlsx';
 
-    $objPHPExcel->getActiveSheet()->setTitle("Data Keuangan");
+  //   $objPHPExcel->getActiveSheet()->setTitle("Data Keuangan");
 
-    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header('Content-Disposition: attachment;filename="' . $filename . '"');
-    header('Cache-Control: max-age=0');
+  //   header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+  //   header('Content-Disposition: attachment;filename="' . $filename . '"');
+  //   header('Cache-Control: max-age=0');
 
-    $writer = PHPExcel_IOFactory::createwriter($objPHPExcel, 'Excel2007');
-    $writer->save('php://output');
+  //   $writer = PHPExcel_IOFactory::createwriter($objPHPExcel, 'Excel2007');
+  //   $writer->save('php://output');
 
-    exit;
-  }
+  //   exit;
+  // }
 }

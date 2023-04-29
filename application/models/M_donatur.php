@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_donatur extends CI_Model
 {
 
-  private $table = 'data_donatur'; //this is table name
+  private $table = 'data_donatur'; //This is table name
   private $pk = 'id_donatur'; //this is primary key
 
 

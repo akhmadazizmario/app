@@ -55,7 +55,7 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
+    <!-- ======= HEader ======= -->
     <header id="header" class="fixed-top d-flex align-items-center header-transparent" style="background-color: rgb(2, 5, 161);">
         <div class="container d-flex align-items-center justify-content-between">
 

@@ -2,6 +2,8 @@
 class Fungsi {
   protected $ci;
 
+  //FUNGSI
+
   public function __construct()
   {
     $this->ci=& get_instance();
@@ -14,5 +16,3 @@ class Fungsi {
     return $user_data;
   }
 }
-
- ?>

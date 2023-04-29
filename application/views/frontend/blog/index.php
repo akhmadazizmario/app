@@ -15,7 +15,7 @@
         </div>
 
 
-        <!-- List Artikel -->
+        <!-- List ArtikelL -->
         <section id="blog" class="blog bg-light">
             <div class="container" data-aos="fade-up">
                 <div class="row">

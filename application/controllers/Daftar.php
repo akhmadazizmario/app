@@ -96,7 +96,7 @@
                 'pekerjaan_ayah' => $this->input->post('pekerjaan_ayah'),
                 'pekerjaan_ibu' => $this->input->post('pekerjaan_ibu'),
             );
-            $data_detail = array( //fungsi array disini adalah untuk mengumpulkan data
+            $data_detail = array( //Fungsi array disini adalah untuk mengumpulkan data
                 'nik_anak' => $this->input->post('nik_anak'),
                 'jenis_masalah' => $this->input->post('jenis_masalah'), //u can use library cipost
                 'keadaan_saat_ini' => $this->input->post('keadaan_saat_ini'),

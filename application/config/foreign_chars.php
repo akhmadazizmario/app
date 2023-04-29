@@ -1,12 +1,12 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
 | Foreign Characters
 | -------------------------------------------------------------------
 | This file contains an array of foreign characters for transliteration
-| conversion used by the Text helper
+| conversion used by the Text Helper
 |
 */
 $foreign_characters = array(
