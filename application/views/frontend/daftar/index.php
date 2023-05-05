@@ -70,27 +70,27 @@
                                     <!-- Bagian kiri -->
                                     <div class="col-lg-6">
                                         <div class="form-group mt-3">
-                                            <label for="nik_anak"><strong> NIK Anak </strong> ( * wajib diisi )</label><br>
+                                            <label for="nik_anak"><strong> NIK Anak </strong> (* wajib diisi)</label><br>
                                             <input class="form-control" id="nik_anak" type="text" name="nik_anak" placeholder="Masukan Nik Calon Siswa" required oninvalid="this.setCustomValidity('NIK Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="nama_anak"><strong> Nama Lengkap Anak </strong> ( *wajib diisi )</label><br>
+                                            <label for="nama_anak"><strong> Nama Lengkap Anak </strong> (*wajib diisi)</label><br>
                                             <input class="form-control" id="nama_anak" type="text" name="nama_anak" placeholder="Masukkan Nama Calon Siswa" required oninvalid="this.setCustomValidity('Nama Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="alamat"><strong> Alamat Lengkap </strong> ( *wajib disi )</label><br>
+                                            <label for="alamat"><strong> Alamat Lengkap </strong> (*wajib disi)</label><br>
                                             <textarea class="form-control" id="alamat" type="address" name="alamat" placeholder="Masukkan Alamat Lengkap " required oninvalid="this.setCustomValidity('Alamat Wajib Diisi')" oninput="this.setCustomValidity('')"></textarea>
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="no_hp"><strong> No HP / whatsapp</strong> ( *Nomor Harus Aktif ! )</label><br>
-                                            <input class="form-control" id="no_hp" type="number" name="no_hp" placeholder="contoh : 6289351789077" required oninvalid="this.setCustomValidity('No hp Wajib Diisi')" oninput="this.setCustomValidity('')">
+                                            <label for="no_hp"><strong> No HP / whatsapp</strong> (*Nomor Harus Aktif !)</label><br>
+                                            <input class="form-control" id="no_hp" type="number" name="no_hp" placeholder="Masukan Nomor hp/whatsapp 12 Digit, contoh : 0897XXXXVVVV" required oninvalid="this.setCustomValidity('No hp Wajib Diisi dan tidak lebih dari 13 digit angka')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="jk_anak"><strong> Jenis Kelamin </strong> ( *wajib diisi ) </label><br>
+                                            <label for="jk_anak"><strong> Jenis Kelamin </strong> (*wajib diisi) </label><br>
                                             <select class="form-control" name="jk_anak" required oninvalid="this.setCustomValidity('Pilih Jenis Kelamin disini')" oninput="setCustomValidity('')">
                                                 <option value="">:: Pilih Jenis Kelamin ::</option>
                                                 <option value="L">Laki-Laki</option>
@@ -99,12 +99,12 @@
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="tempat_lahir_anak"> <strong> Tempat Lahir Anak </strong> ( *wajib diisi )</label><br>
+                                            <label for="tempat_lahir_anak"> <strong> Tempat Lahir Anak </strong> (*wajib diisi)</label><br>
                                             <input class="form-control" id="tempat_lahir_anak" type="text" name="tempat_lahir_anak" placeholder="Masukkan Tempat Lahir" required oninvalid="this.setCustomValidity('Tempat Lahir Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="tgl_lahir_anak"><strong> Tanggal Lahir Anak </strong> ( *wajib diisi )</label><br>
+                                            <label for="tgl_lahir_anak"><strong> Tanggal Lahir Anak </strong> (*wajib diisi)</label><br>
                                             <input class="form-control" id="tgl_lahir_anak" type="date" name="tgl_lahir_anak" placeholder="Masukkan Tanggal Lahir" required oninvalid="this.setCustomValidity('Tanggal Lahir Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
@@ -114,13 +114,13 @@
                                         </div>
                                         <br>
                                         <div class="form-group">
-                                            <label for="nama_ibu_kandung"><strong> Nama ibu </strong>( *wajib diisi )</label><br>
+                                            <label for="nama_ibu_kandung"><strong> Nama ibu </strong>(*wajib diisi)</label><br>
                                             <input class="form-control" id="nama_ibu_kandung" type="text" name="nama_ibu_kandung" placeholder="masukan nama ibu" required oninvalid="this.setCustomValidity('nama Ibu Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                         <br>
 
                                         <div class="form-group">
-                                            <label for="nama_bapak_kandung"><strong> Nama Ayah </strong>( *wajib diisi )</label><br>
+                                            <label for="nama_bapak_kandung"><strong> Nama Ayah </strong>(*wajib diisi)</label><br>
                                             <input class="form-control" id="nama_bapak_kandung" type="text" name="nama_bapak_kandung" placeholder="masukan nama ayah" required oninvalid="this.setCustomValidity('Nama Ayah Wajib Diisi')" oninput="this.setCustomValidity('')">
                                         </div>
                                     </div>
@@ -128,12 +128,12 @@
                                     <!-- Bagian Kanan -->
                                     <div class="col-lg-6">
                                         <div class="form-group mt-3">
-                                            <Link for="pekerjaan_ibu"><strong>Pekerjaan Ibu</strong>( *wajib diisi )</label><br>
+                                            <Link for="pekerjaan_ibu"><strong>Pekerjaan Ibu</strong>(*wajib diisi)</label><br>
                                             <input class="form-control" id="pekerjaan_ibu" type="text" name="pekerjaan_ibu" placeholder="contoh : Petani" required oninvalid="this.setCustomValidity('Pekerjaan ibu wajib diisi')" oninput="this.setCustomValidity('')">
                                         </div>
 
                                         <div class="form-group mt-3">
-                                            <label for="pekerjaan_ayah"><strong> Pekerjaan Ayah </strong>( *wajib diisi )</label><br>
+                                            <label for="pekerjaan_ayah"><strong> Pekerjaan Ayah </strong>(*wajib diisi)</label><br>
                                             <input class="form-control" id="pekerjaan_ayah" type="text" name="pekerjaan_ayah" placeholder="contoh : Buruh Pabrik" required oninvalid="this.setCustomValidity('Pekerjaan ayah wajib diisi')" oninput="this.setCustomValidity('')">
                                         </div>
 
@@ -144,7 +144,7 @@
                                         </div>
                                         <br>-->
                                         <div class="form-group mt-3">
-                                            <label for="agama"><strong> Agama </strong>(*wajib diisi )</label><br>
+                                            <label for="agama"><strong> Agama </strong>(*wajib diisi)</label><br>
                                             <select class="form-control" name="agama" required oninvalid="this.setCustomValidity('Pilih Agama disini')" oninput="setCustomValidity('')">
                                                 <option value="">:: Pilih Agama ::</option>
                                                 <option value="1">Islam</option>

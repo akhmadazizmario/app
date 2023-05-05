@@ -5,7 +5,7 @@ class M_anak extends CI_Model
 {
 
   private $table = 'data_siswa';
-  private $table2 = 'detail_santri'; //This is table name
+  private $table2 = 'detail_siswa'; //This is table name
   private $pk = 'nik_anak'; //this is primary key
   private $pk2 = 'nik_anak';
   private $id  = 'id_anak';
@@ -220,7 +220,7 @@ class M_anak extends CI_Model
     $this->db->where('nik_anak', $id);
     $this->db->delete('data_siswa');
     $this->db->where('nik_anak', $id);
-    $this->db->delete('detail_santri');
+    $this->db->delete('detail_siswa');
   }
 
   function cek_nik($code, $id = null)

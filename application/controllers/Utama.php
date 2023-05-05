@@ -15,6 +15,7 @@ class Utama extends CI_Controller
     {
         $data = array(
             'data' => $this->M_pengaturan->GetAll()->result_array(),
+            'blog' => $this->M_blog->get_latest_blogs()->result_array(),
             'brosur' => $this->M_brosur->GetAll()->result_array(),
             'footer' => $this->M_pengaturan->GetAll()->result_array(),
             'judul' => 'Data Pengaturan',

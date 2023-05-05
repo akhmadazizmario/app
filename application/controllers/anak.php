@@ -23,7 +23,8 @@ class Anak extends CI_Controller
       'data' => $this->M_anak->GetAll()->result_array(),
       'judul' => 'Data Siswa',
     ); //u can use library array
-    $this->template->load($this->foldertemplate . 'template', $this->folder . 'read', $data);
+    $this->load->view('anak/read', $data);
+    //$this->template->load($this->foldertemplate . 'template',$this->folder . 'read', $data);
   }
 
   public function tambah()
@@ -53,11 +54,15 @@ class Anak extends CI_Controller
     //         $this->ImgThumbs($img['file_name']);
     //         $title = $this->input->post('title', TRUE);
     //         $img_berita = $img['file_name'];
+    $phone = $this->input->post('no_hp');
+    if (substr($phone, 0, 2) !== '62') {
+      $phone = '62' . substr($phone, 1);
+    }
 
     $data_anak = array( //fungsi array disini adalah untuk mengumpulkan data 
       'nik_anak' => $this->input->post('nik_anak'),
       'alamat' => $this->input->post('alamat'),
-      'no_hp' => $this->input->post('no_hp'),
+      'no_hp' => $phone,
       'nama_anak' => $this->input->post('nama_anak'), //u can use library cipost
       'jk_anak' => $this->input->post('jk_anak'),
       'tempat_lahir_anak' => $this->input->post('tempat_lahir_anak'),
@@ -127,6 +132,10 @@ class Anak extends CI_Controller
   public function updateanak()
   {
     $id = $this->uri->segment(3);
+    $phone = $this->input->post('no_hp');
+    if (substr($phone, 0, 2) !== '62') {
+      $phone = '62' . substr($phone, 1);
+    }
     $data_anak = array( //fungsi array disini adalah untuk mengumpulkan data
       'nik_anak' => $this->input->post('nik_anak'),
       'nama_anak' => $this->input->post('nama_anak'), //u can use library cipost
@@ -144,7 +153,7 @@ class Anak extends CI_Controller
       'id_kelas' => $this->input->post('id_kelas'),
       'tahun_masuk' => $this->input->post('tahun_masuk'),
       'NISN' => $this->input->post('NISN'),
-      'no_hp' => $this->input->post('no_hp'),
+      'no_hp' => $phone,
       'status' => $this->input->post('status'),
     );
 

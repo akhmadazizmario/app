@@ -5,7 +5,7 @@ class M_daftar extends CI_Model
 {
     private $table = 'data_siswa';
     private $pk    = 'nik_anak';
-    private $table2 = 'detail_santri'; //This is table name
+    private $table2 = 'detail_siswa'; //This is table name
     private $pk2 = 'nik_anak';
     private $id  = 'id_anak';
 

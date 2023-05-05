@@ -100,4 +100,14 @@ class M_blog extends CI_Model
         $this->db->where($this->pk, $id); //u can use cidbwhere
         return $this->db->get($this->table)->row_array();
     }
+
+    public function get_latest_blogs($id = null)
+    { {
+            $this->db->order_by($this->pk, 'desc');
+            if ($id != null) {
+                $this->db->where('id_berita', $id);
+            }
+            return $this->db->get($this->table, 3); //u can use library cidbget
+        }
+    }
 }

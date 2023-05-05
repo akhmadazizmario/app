@@ -27,7 +27,23 @@
                           Sebagai media informasi dan komunikasi Web SDN Mejasem Barat 01
                           dibangun dan dikembangkan dalam rangka meningkatkan layanan sekolah kepada peserta didik, orang tua, dan masyarakat.</p>
                       <div class="text-center text-lg-start">
-                          <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Daftar Peserta Didik Baru <i class="bi bi-receipt"></i></a>
+
+
+                          <?php if (date('m') == '05') { ?>
+                              <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Daftar Peserta Didik Baru <i class="bi bi-receipt"></i></a>
+                          <?php } elseif (date('m') == '06') { ?>
+                              <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Daftar Peserta Didik Baru <i class="bi bi-receipt"></i></a>
+                          <?php } elseif (date('m') == '07') { ?>
+                              <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Daftar Peserta Didik Baru <i class="bi bi-receipt"></i></a>
+                          <?php } else { ?>
+                              <p><strong style="color: white;">Welcome in Website</strong></p>
+                          <?php } ?>
+
+
+
+
+
+
                       </div>
                   </div>
               </div>
@@ -97,7 +113,7 @@
                   <div class="row"><br><br>
                       <?php
                         foreach ($data as $data) { ?> <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-                              <img src="<?= base_url() ?>assets/images/upload/<?php echo ucwords($data['image']); ?>" alt="" height="450px" width="60%">
+                              <img src="<?= base_url() ?>assets/images/upload/<?php echo ucwords($data['image']); ?>" alt="" height="450px" width="85%">
 
                           </div>
 
@@ -170,7 +186,6 @@
           </div>
       </section><!-- End Details Section -->
 
-
       <!-- ======= Pricing Section ======= -->
       <section id="pricing" class="pricing bg-light">
           <div class="container">
@@ -203,7 +218,7 @@
                   <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
                       <div class="box" data-aos="zoom-in" data-aos-delay="300" style="height: 350px;">
                           <h3 style="color:white;background-color:black;">Alamat Sekolah</h3><br><br>
-                          <p>Jl. Semanggi IV, Sibata, Mejasem Tim., Kec. Kramat, Kabupaten Tegal, Jawa Tengah 12930</p>
+                          <p>Jl. Semanggi IV, Sibata, Mejasem Barat., Kec. Kramat, Kabupaten Tegal, Jawa Tengah 12930</p>
 
                       </div>
                   </div>
@@ -214,6 +229,60 @@
 
           </div>
       </section><!-- End Pricing Section -->
+
+
+
+      <!-- List ArtikelL -->
+      <section id="blog" class="blog" style="background-color: #018ABE;">
+          <div class="container" data-aos="fade-up">
+              <div class="row">
+                  <div class="mb-5">
+                      <h3><strong style="color: white;">Berita Sekolah Terbaru</strong></h3>
+
+                  </div>
+
+
+                  <div class="container">
+                      <div class="row gy-4 posts-list">
+                          <?php
+                            foreach ($blog as $b) { ?>
+                              <div class="col-lg-4">
+
+                                  <article class="d-flex flex-column rounded bg-white">
+
+
+                                      <div class="post-img">
+                                          <img src="<?php echo base_url(); ?>assets/images/upload/<?= $b['image']; ?>" alt="" class="img-fluid rounded-top">
+                                      </div>
+
+                                      <h2 class="title">
+                                          <a href=""><?php echo substr($b['judul'], 0, 40) . '...'; ?></a><br>
+                                      </h2>
+
+                                      <div class="content">
+                                          <p>
+                                              <?php echo substr($b['isi'], 0, 200) . '...'; ?>
+                                          </p>
+                                      </div>
+
+                                      <div class="read-more mt-auto align-self-end">
+                                          <a class="bg-light text-dark" href="#"><i class="bi bi-calendar-date">&nbsp;</i><?= $b['tanggal']; ?></a>
+                                          <a href="<?php echo base_url('utama/detail/' . $b['id_berita']) ?>">Baca Berita</a>
+                                      </div>
+
+
+                                  </article>
+                              </div>
+                          <?php
+                            } ?>
+                      </div>
+                  </div>
+
+
+
+              </div>
+          </div>
+      </section>
 
 
   <?php } ?>

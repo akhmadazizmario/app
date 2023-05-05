@@ -78,10 +78,15 @@
             //         $title = $this->input->post('title', TRUE);
             //         $img_berita = $img['file_name'];
 
+            $phone = $this->input->post('no_hp');
+            if (substr($phone, 0, 2) !== '62') {
+                $phone = '62' . substr($phone, 1);
+            }
+
             $data_anak = array( //fungsi array disini adalah untuk mengumpulkan data 
                 'nik_anak' => $this->input->post('nik_anak'),
                 'alamat' => $this->input->post('alamat'),
-                'no_hp' => $this->input->post('no_hp'),
+                'no_hp' => $phone,
                 'nama_anak' => $this->input->post('nama_anak'), //u can use library cipost
                 'jk_anak' => $this->input->post('jk_anak'),
                 'tempat_lahir_anak' => $this->input->post('tempat_lahir_anak'),
@@ -96,6 +101,7 @@
                 'pekerjaan_ayah' => $this->input->post('pekerjaan_ayah'),
                 'pekerjaan_ibu' => $this->input->post('pekerjaan_ibu'),
             );
+
             $data_detail = array( //Fungsi array disini adalah untuk mengumpulkan data
                 'nik_anak' => $this->input->post('nik_anak'),
                 'jenis_masalah' => $this->input->post('jenis_masalah'), //u can use library cipost
@@ -108,6 +114,7 @@
                 'jenis_bantuan' => $this->input->post('jenis_bantuan'),
                 'tahun_bantuan' => $this->input->post('tahun_bantuan'),
             );
+
             $this->M_daftar->save($data_anak);
             $this->M_daftar->savedetail($data_detail);
             $this->session->set_flashdata('success', 'Berhasil mendaftar, untuk informasi selanjutnya akan diberitahu melalui whatsapp group.');
