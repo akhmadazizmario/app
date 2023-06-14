@@ -1,6 +1,5 @@
 database
-upload
-assets
-.htaccess
-changelogs.md
-index.php
+
+#codeigniter 3
+application/logs/*
+!application/.htaccess
