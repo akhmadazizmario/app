@@ -1,5 +1,2 @@
 database
-
-#codeigniter 3
-application/logs/*
-!application/.htaccess
+application/controllers
