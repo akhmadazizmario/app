@@ -1,12 +1,9 @@
   <!-- ======= Hero SectionN ======= -->
   <section id="hero" style="background-color: rgb(2, 5, 161);">
-
       <div class="container">
           <div class="row justify-content-between">
               <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
                   <div data-aos="zoom-out">
-
-
                       <h1 style="color: white;">SDN MEJASEM BARAT 01 </h1>
                       <p class="text-white">
                           <?php
@@ -27,8 +24,6 @@
                           Sebagai media informasi dan komunikasi Web SDN Mejasem Barat 01
                           dibangun dan dikembangkan dalam rangka meningkatkan layanan sekolah kepada peserta didik, orang tua, dan masyarakat.</p>
                       <div class="text-center text-lg-start">
-
-
                           <?php if (date('m') == '05') { ?>
                               <a href="<?php echo base_url('daftar/siswabaru') ?>" class="btn-get-started scrollto" style="background-color:green;">Daftar Peserta Didik Baru <i class="bi bi-receipt"></i></a>
                           <?php } elseif (date('m') == '06') { ?>
@@ -38,12 +33,6 @@
                           <?php } else { ?>
                               <p><strong style="color: white;">Welcome in Website</strong></p>
                           <?php } ?>
-
-
-
-
-
-
                       </div>
                   </div>
               </div>
@@ -53,6 +42,7 @@
           </div>
       </div>
 
+      <!--Gelombang Ombak-->
       <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
           <defs>
               <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
@@ -68,7 +58,6 @@
           </g>
       </svg>
 
-
   </section><!-- End Hero -->
 
 
@@ -76,8 +65,6 @@
   <section id="">
       <div class="container">
           <div class="row">
-
-
               <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-inner">
                       <div class="carousel-item active" data-bs-interval="10000">
@@ -96,9 +83,6 @@
                       <span class="visually-hidden">Next</span>
                   </button>
               </div>
-
-
-
           </div>
       </div>
   </section>
@@ -116,20 +100,19 @@
                               <img src="<?= base_url() ?>assets/images/upload/<?php echo ucwords($data['image']); ?>" alt="" height="450px" width="85%">
 
                           </div>
-
                           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
                               <h3>Sambutan Kepala Sekolah</h3>
                               <p>Assalamu‘alaikum Warohmatullahi Wabarokkatuh. <br>
-
-                                  Selamat datang di situs web SDN Mejasem Barat 01, Kecamatan Kramat Kabupaten Tegal Jawa Tengah. Saya mengucapkan terima kasih kepada semua guru, staf, siswa, dan orang tua yang telah berkontribusi dalam memajukan sekolah kami. Sekolah ini telah berkembang pesat dan mencapai tujuan pendidikannya dengan baik. Kami bertekad untuk terus memberikan pelayanan terbaik bagi siswa dan orang tua. Semoga kunjungan Anda dan anggota keluarga di website ini dapat memberikan informasi yang membantu Anda untuk mengetahui lebih banyak tentang kami, termasuk program-program unggulan yang kami miliki. Terima kasih.
-
+                                  Selamat datang di situs web SDN Mejasem Barat 01, Kecamatan Kramat Kabupaten Tegal Jawa Tengah.
+                                  Saya mengucapkan terima kasih kepada semua guru, staf, siswa, dan orang tua yang telah berkontribusi
+                                  dalam memajukan sekolah kami. Sekolah ini telah berkembang pesat dan mencapai tujuan pendidikannya dengan baik.
+                                  Kami bertekad untuk terus memberikan pelayanan terbaik bagi siswa dan orang tua.
+                                  Semoga kunjungan Anda dan anggota keluarga di website ini dapat memberikan informasi yang membantu Anda untuk
+                                  mengetahui lebih banyak tentang kami, termasuk program-program unggulan yang kami miliki. Terima kasih.
                                   Wassalamu'alaikum Warahmatullahi Wabarakatuh. <br><br> Salam Hangat, <br>
 
                               <h4><strong><?php echo ucwords($data['nama_kepala_ponpes']); ?></strong></h4>
-
-                              Kepala Sekolah, <br>
-
-                              SDN Mejasem Barat 01, Kecamatan Kramat, Kabupaten Tegal, Jawa Tengah.</p>
+                              Kepala Sekolah, <br> SDN Mejasem Barat 01, Kecamatan Kramat, Kabupaten Tegal, Jawa Tengah.</p>
                               <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
                               <defs>
                                   <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
@@ -144,15 +127,12 @@
                                   <use xlink:href="#wave-path" x="50" y="9" fill="#01BABE">
                               </g>
                           </svg>-->
-
-
-
                           </div>
                   </div>
               </div>
-
           </div>
       </section><!-- End About Section -->
+
       <!-- ======= Details Section ======= -->
       <section id="details" class="details">
           <div class="container">
@@ -162,7 +142,6 @@
                             foreach ($brosur as $br) { ?>
                           <img src="<?php echo base_url(); ?>assets/images/upload/<?= $br['image']; ?>" width="100%" height="500px" alt="...">
                       <?php } ?>
-
                   </div>
                   <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
                       <h3>VISI DAN MISI</h3><br>
@@ -181,17 +160,13 @@
                       </p>
                   </div>
               </div>
-
-
           </div>
       </section><!-- End Details Section -->
 
       <!-- ======= Pricing Section ======= -->
       <section id="pricing" class="pricing bg-light">
           <div class="container">
-
               <div class="row" data-aos="fade-left">
-
                   <div class="col-lg-4 col-md-6 ">
                       <div class="box" data-aos="zoom-in" data-aos-delay="200" style="height: 350px;">
                           <h3 style="color:white;background-color:black;">Informasi Pendaftaran</h3><br>
@@ -204,7 +179,6 @@
 
                       </div>
                   </div>
-
                   <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
                       <div class="box" data-aos="zoom-in" data-aos-delay="100" style="height: 350px;">
                           <h3 style="color:white;background-color:black;">Bantuan ?</h3><br>
@@ -214,23 +188,15 @@
                           </div>
                       </div>
                   </div>
-
                   <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
                       <div class="box" data-aos="zoom-in" data-aos-delay="300" style="height: 350px;">
                           <h3 style="color:white;background-color:black;">Alamat Sekolah</h3><br><br>
                           <p>Jl. Semanggi IV, Sibata, Mejasem Barat., Kec. Kramat, Kabupaten Tegal, Jawa Tengah 12930</p>
-
                       </div>
                   </div>
-
-
-
               </div>
-
           </div>
       </section><!-- End Pricing Section -->
-
-
 
       <!-- List ArtikelL -->
       <section id="blog" class="blog" style="background-color: #018ABE;">
@@ -238,56 +204,38 @@
               <div class="row">
                   <div class="mb-5">
                       <h3><strong style="color: white;">Berita Sekolah Terbaru</strong></h3>
-
                   </div>
-
-
                   <div class="container">
                       <div class="row gy-4 posts-list">
                           <?php
                             foreach ($blog as $b) { ?>
                               <div class="col-lg-4">
-
                                   <article class="d-flex flex-column rounded bg-white">
-
-
                                       <div class="post-img">
                                           <img src="<?php echo base_url(); ?>assets/images/upload/<?= $b['image']; ?>" alt="" class="img-fluid rounded-top">
                                       </div>
-
                                       <h2 class="title">
                                           <a href=""><?php echo substr($b['judul'], 0, 40) . '...'; ?></a><br>
                                       </h2>
-
                                       <div class="content">
                                           <p>
                                               <?php echo substr($b['isi'], 0, 200) . '...'; ?>
                                           </p>
                                       </div>
-
                                       <div class="read-more mt-auto align-self-end">
                                           <a class="bg-light text-dark" href="#"><i class="bi bi-calendar-date">&nbsp;</i><?= $b['tanggal']; ?></a>
                                           <a href="<?php echo base_url('utama/detail/' . $b['id_berita']) ?>">Baca Berita</a>
                                       </div>
-
-
                                   </article>
                               </div>
                           <?php
                             } ?>
                       </div>
                   </div>
-
-
-
               </div>
           </div>
       </section>
-
-
   <?php } ?>
-
-
 
 
   <!-- Bagian Peta -->
