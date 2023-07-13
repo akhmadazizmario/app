@@ -21,7 +21,7 @@
                         <form action="<?= base_url('blog/update/' . $row['id_berita']); ?>" method="post" enctype="multipart/form-data">
                             <input type="hidden" class="form-control" name="id_berita" value="<?= $row['id_berita'] ?>">
                             <div class="form-group">
-                                <label for="Judul"> Judul :</label><br>
+                                <label for="Judul"> JUDUL :</label><br>
                                 <input class="form-control" id="judul" type="text" name="judul" value="<?= $row['judul'] ?>" required oninvalid="this.setCustomValidity('Judul Wajib Diisi')" oninput="this.setCustomValidity('')">
                             </div>
 
