@@ -9,7 +9,6 @@
                     <li class="text-dark">Pendaftaran</li>
                 </ol>
             </div>
-
         </div>
     </div>
     <section>
